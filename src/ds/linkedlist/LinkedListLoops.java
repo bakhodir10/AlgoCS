@@ -112,6 +112,7 @@ public class LinkedListLoops<E> {
                 // they meet at starting point of the loop
                 while (fast != slow) {
                     fast = fast.next;
+                    slow = slow.next;
                 }
                 // to seek end point of the loop
                 while (fast.next != slow) {

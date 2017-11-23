@@ -9,8 +9,8 @@ other algorithms that add an item at the beginning or end of the list, fi nd
 an item, and remove an item? Write an algorithm for removing an item
 from this kind of list.
  */
-public class AddAtTheEnd<E> {
-
+public class AddAtTheEndSingle<E> {
+    private int size;
     private ListNode head;
     private ListNode tail;
 
@@ -22,7 +22,7 @@ public class AddAtTheEnd<E> {
             tail.next = newNode;
             tail = tail.next;
         }
-
+        size ++;
         return head;
     }
 

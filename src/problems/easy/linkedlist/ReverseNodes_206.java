@@ -1,7 +1,7 @@
 package problems.easy.linkedlist;
 
 // todo not done
-public class ReverseLinkedList_206 {
+public class ReverseNodes_206 {
     public static void main(String[] args) {
 
     }

@@ -3,20 +3,24 @@ package problems.easy.linkedlist;
 /*
     Write an algorithm to add an item at the top of a doubly linked list.
  */
-public class AddAtTop<E> {
+public class AddAtTheTopDouble<E> {
+    private int size;
     private ListNode head;
     private ListNode tail;
 
     public ListNode add(ListNode newNode) {
         if (newNode == null) throw new NullPointerException();
 
-        ListNode sentinel = new ListNode(null, head, null);
         if (head == null) {
             head = tail = newNode;
         } else {
-            sentinel.next = newNode.next;
+            newNode.next = head;
+            head = newNode;
+            head.next.prev = head;
+            head.prev = null;
         }
-        return sentinel.next;
+        size ++;
+        return head;
     }
 
     private class ListNode {

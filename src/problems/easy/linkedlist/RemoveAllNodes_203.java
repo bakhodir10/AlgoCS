@@ -1,7 +1,7 @@
 package problems.easy.linkedlist;
 
 // todo not done
-public class RemoveAllLinkedList_203 {
+public class RemoveAllNodes_203 {
 
     public ListNode removeElements(ListNode head, int val) {
         ListNode temp = new ListNode(Integer.MIN_VALUE);
@@ -17,7 +17,7 @@ public class RemoveAllLinkedList_203 {
         return head;
     }
 
-    public void add(){
+    public void add() {
         ListNode node = new ListNode(6);
         ListNode node1 = new ListNode(-16);
         ListNode node2 = new ListNode(3);
@@ -48,7 +48,7 @@ public class RemoveAllLinkedList_203 {
     }
 
     public static void main(String[] args) {
-        RemoveAllLinkedList_203 list = new RemoveAllLinkedList_203();
+        RemoveAllNodes_203 list = new RemoveAllNodes_203();
         list.add();
     }
 

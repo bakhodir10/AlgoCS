@@ -22,7 +22,7 @@ public class AddAtTheEndSingle<E> {
             tail.next = newNode;
             tail = tail.next;
         }
-        size ++;
+        size++;
         return head;
     }
 

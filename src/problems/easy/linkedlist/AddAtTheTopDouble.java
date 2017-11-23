@@ -19,7 +19,7 @@ public class AddAtTheTopDouble<E> {
             head.next.prev = head;
             head.prev = null;
         }
-        size ++;
+        size++;
         return head;
     }
 

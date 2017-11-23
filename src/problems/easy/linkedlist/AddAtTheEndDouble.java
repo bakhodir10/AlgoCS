@@ -9,18 +9,17 @@ public class AddAtTheEndDouble<E> {
     private ListNode head;
     private ListNode tail;
 
-    public void add(ListNode newNode){
-        if(newNode == null)  throw new NullPointerException();
+    public void add(ListNode newNode) {
+        if (newNode == null) throw new NullPointerException();
 
-        if(head == null){
+        if (head == null) {
             head = tail = newNode;
-        }
-        else {
+        } else {
             tail.next = newNode;
             tail.next.prev = tail;
             tail = tail.next;
         }
-        size ++;
+        size++;
     }
 
     private class ListNode {

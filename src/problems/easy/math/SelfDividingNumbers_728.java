@@ -1,4 +1,4 @@
-package problems.easy;
+package problems.easy.math;
 
 import java.util.LinkedList;
 import java.util.List;

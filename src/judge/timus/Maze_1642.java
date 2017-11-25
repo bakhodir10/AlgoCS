@@ -2,7 +2,7 @@ package judge.timus;
 
 import java.util.Scanner;
 
-// not accepted
+// todo not done
 
 public class Maze_1642 {
     public static void main(String[] args) {

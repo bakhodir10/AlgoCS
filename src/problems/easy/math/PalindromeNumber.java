@@ -1,4 +1,4 @@
-package problems.easy;
+package problems.easy.math;
 
 public class PalindromeNumber {
     public static boolean isPalindrome(int number){

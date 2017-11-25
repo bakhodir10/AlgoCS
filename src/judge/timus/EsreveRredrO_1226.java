@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-// not accepted
+// todo not done
 
 public class EsreveRredrO_1226 {
     public static void main(String[] args) throws IOException {

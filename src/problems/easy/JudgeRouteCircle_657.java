@@ -2,14 +2,14 @@ package problems.easy;
 
 public class JudgeRouteCircle_657 {
     public static boolean judgeCircle(String moves) {
-        int positive = 0;
+        int count = 0;
 
         for (int i = 0; i < moves.length(); i++) {
-            if (moves.charAt(i) == 'R') positive++;
-            if (moves.charAt(i) == 'L') positive--;
-            if (moves.charAt(i) == 'U') positive++;
-            if (moves.charAt(i) == 'D') positive--;
+            if (moves.charAt(i) == 'R') count++;
+            if (moves.charAt(i) == 'L') count--;
+            if (moves.charAt(i) == 'U') count++;
+            if (moves.charAt(i) == 'D') count--;
         }
-        return positive == 0;
+        return count == 0;
     }
 }

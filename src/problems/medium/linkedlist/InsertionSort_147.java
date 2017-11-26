@@ -3,7 +3,7 @@ package problems.medium.linkedlist;
 public class InsertionSort_147 {
 
     public ListNode insertionSortList(ListNode head) {
-        if (head == null) throw new NullPointerException();
+        if (head == null) return null;
 
         ListNode temp = head;
         ListNode sentinel = new ListNode(Integer.MIN_VALUE);
@@ -14,7 +14,7 @@ public class InsertionSort_147 {
             temp = temp.next;
             ListNode after_me = sentinel;
 
-            while (after_me.next != null && (Integer) after_me.next.val < (Integer) next_cell.val) {
+            while (after_me.next != null && after_me.next.val < next_cell.val) {
                 after_me = after_me.next;
             }
 

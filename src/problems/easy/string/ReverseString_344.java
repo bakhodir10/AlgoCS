@@ -1,4 +1,4 @@
-package problems.easy;
+package problems.easy.string;
 
 public class ReverseString_344 {
     public static String reverseString(String s) {

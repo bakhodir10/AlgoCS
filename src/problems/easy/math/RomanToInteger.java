@@ -1,4 +1,4 @@
-package problems.easy;
+package problems.easy.math;
 
 // todo not done
 public class RomanToInteger {

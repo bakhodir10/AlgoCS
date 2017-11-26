@@ -1,6 +1,6 @@
-package problems.easy;
+package problems.easy.math;
 
-public class ReverseInteger {
+public class ReverseInteger_7 {
     public static int reverse(int number){
         long rev = 0;
         while (number != 0){

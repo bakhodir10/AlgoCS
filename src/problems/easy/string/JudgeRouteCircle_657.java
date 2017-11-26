@@ -1,4 +1,4 @@
-package problems.easy;
+package problems.easy.string;
 
 public class JudgeRouteCircle_657 {
     public static boolean judgeCircle(String moves) {

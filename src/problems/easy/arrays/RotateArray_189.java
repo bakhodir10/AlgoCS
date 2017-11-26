@@ -1,4 +1,4 @@
-package problems.easy;
+package problems.easy.arrays;
 
 // todo not done
 public class RotateArray_189 {

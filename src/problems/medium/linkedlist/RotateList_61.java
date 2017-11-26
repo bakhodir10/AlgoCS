@@ -1,4 +1,4 @@
-package problems.easy.linkedlist;
+package problems.medium.linkedlist;
 
 // todo not done
 public class RotateList_61 {

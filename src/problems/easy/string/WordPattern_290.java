@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
-public class WordPattern {
+public class WordPattern_290 {
     public static boolean wordPattern(String pattern, String str){
         Map<Character, String> map = new HashMap<>();
         String words[] = str.split(" ");

@@ -5,23 +5,24 @@ import java.util.NoSuchElementException;
 public class StackArray<E> {
     public int size;
     private Object[] arr;
-    private int INITIAL_CAPACITY = 12;
+    private int INITIAL_CAPACITY = 2;
 
     public StackArray() {
         arr = new Object[INITIAL_CAPACITY];
     }
 
     public void push(E elem) {
-        if (arr.length == size) resize();
+        if (arr.length == size) increase();
         arr[size++] = elem;
     }
 
     @SuppressWarnings("unchecked")
     public E pop() {
-        if (size == arr.length) throw new NoSuchElementException();
+        if (size == 0) throw new NoSuchElementException();
         Object temp = arr[size - 1];
         arr[size - 1] = null;
         size--;
+        if (size == arr.length - INITIAL_CAPACITY) decrease();
         return (E) temp;
     }
 
@@ -31,13 +32,27 @@ public class StackArray<E> {
         return (E) arr[0];
     }
 
-    private void resize() {
+    private void increase() {
         Object[] obj = new Object[arr.length + INITIAL_CAPACITY];
         System.arraycopy(arr, 0, obj, 0, arr.length);
         arr = obj;
     }
 
-    public void iterate() {
-        for (int i = 0; i < size; i++) System.out.println(arr[i]);
+    private void decrease() {
+        Object[] obj = new Object[arr.length - INITIAL_CAPACITY];
+        System.arraycopy(arr, 0, obj, 0, size);
+        arr = obj;
+    }
+
+    public String toString() {
+        if (arr.length == 0) return "[]";
+        StringBuilder b = new StringBuilder();
+        b.append("[ ");
+        for (int i = 0; i < size; i++) {
+            b.append(arr[i]);
+            if (i != size - 1) b.append(", ");
+        }
+        b.append(" ]");
+        return b.toString();
     }
 }

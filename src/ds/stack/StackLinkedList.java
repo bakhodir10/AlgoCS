@@ -1,15 +1,14 @@
 package ds.stack;
 
-
 import java.util.NoSuchElementException;
 
 public class StackLinkedList<E> {
     private int size;
-    private ListNode head;
+    private Node head;
 
     public void push(E elem) {
         if (elem == null) throw new NullPointerException();
-        ListNode sentinel = new ListNode(elem);
+        Node sentinel = new Node(elem);
         sentinel.next = head;
         head = sentinel;
         size++;
@@ -28,7 +27,7 @@ public class StackLinkedList<E> {
     }
 
     public void iterate() {
-        ListNode temp = head;
+        Node temp = head;
         while (temp != null) {
             System.out.println(temp.elem);
             temp = temp.next;
@@ -40,15 +39,15 @@ public class StackLinkedList<E> {
     }
 
 
-    class ListNode {
+    class Node {
         private E elem;
-        private ListNode next;
+        private Node next;
 
-        public ListNode(E elem) {
+        public Node(E elem) {
             this.elem = elem;
         }
 
-        public ListNode(E elem, ListNode next) {
+        public Node(E elem, Node next) {
             this.elem = elem;
             this.next = next;
         }

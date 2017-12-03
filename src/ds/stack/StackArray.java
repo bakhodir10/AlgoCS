@@ -5,7 +5,7 @@ import java.util.NoSuchElementException;
 public class StackArray<E> {
     public int size;
     private Object[] arr;
-    private int INITIAL_CAPACITY = 2;
+    private int INITIAL_CAPACITY = 12;
 
     public StackArray() {
         arr = new Object[INITIAL_CAPACITY];
@@ -47,12 +47,12 @@ public class StackArray<E> {
     public String toString() {
         if (arr.length == 0) return "[]";
         StringBuilder b = new StringBuilder();
-        b.append("[ ");
+        b.append("[");
         for (int i = 0; i < size; i++) {
             b.append(arr[i]);
             if (i != size - 1) b.append(", ");
         }
-        b.append(" ]");
+        b.append("]");
         return b.toString();
     }
 }

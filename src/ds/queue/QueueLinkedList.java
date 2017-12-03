@@ -1,11 +1,14 @@
 package ds.queue;
 
+import java.util.NoSuchElementException;
+
 public class QueueLinkedList<E> {
     private int size;
     private Node head;
     private Node tail;
 
     public void offer(E elem) {
+        if (elem == null) throw new NoSuchElementException();
         Node newNode = new Node(elem, null);
         if (head == null) head = tail = newNode;
         else {
@@ -18,6 +21,7 @@ public class QueueLinkedList<E> {
 
     @SuppressWarnings("unchecked")
     public E poll() {
+        if (tail == null) throw new NoSuchElementException();
         Node node = tail;
         tail.prev.next = null;
         tail = tail.prev;

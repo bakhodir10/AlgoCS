@@ -21,7 +21,7 @@ public class QueueLinkedList<E> {
 
     @SuppressWarnings("unchecked")
     public E poll() {
-        if (tail == null) throw new NoSuchElementException();
+        if (head == null) throw new NoSuchElementException();
         Node node = tail;
         tail.prev.next = null;
         tail = tail.prev;

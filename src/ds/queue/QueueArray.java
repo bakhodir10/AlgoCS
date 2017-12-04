@@ -18,6 +18,7 @@ public class QueueArray<E> {
     }
 
     public void offer(E elem) {
+        if(elem == null) throw new NullPointerException();
         if (target == 0) resize();
         arr[--target] = elem;
     }

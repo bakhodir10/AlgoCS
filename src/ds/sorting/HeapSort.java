@@ -51,8 +51,8 @@ public class HeapSort {
         }
     }
 
-    // sort using by heap
-    public int[] heapSort() {
+    // sort by using heap
+    public int[] sort() {
         // make a heap
         makeHeap();
         // sorting

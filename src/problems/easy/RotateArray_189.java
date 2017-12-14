@@ -6,14 +6,11 @@ public class RotateArray_189 {
         rotate1(new int[]{2, 1}, 1);
     }
 
-    public static void rotate1(int[] nums, int k){
+    public static void rotate1(int[] arr, int k) {
+        for (int i = 0; i < arr.length; i++) {
+            int temp = arr[i];
+            arr[i] = arr[k % arr.length + i];
 
-        for (int i = nums.length - (k % nums.length); i < nums.length; i++) {
-            System.out.print(nums[i] + " ");
-        }
-
-        for (int i = 0; i < nums.length - (k % nums.length); i++) {
-            System.out.print(nums[i] + " ");
         }
     }
 }

@@ -3,7 +3,7 @@ package problems.medium;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FindAllDuplicates_442 {
+public class FindDuplicates_442 {
     public static List<Integer> findDuplicates(int[] nums) {
         List<Integer> res = new ArrayList<>();
         for (int i = 0; i < nums.length; i++) {

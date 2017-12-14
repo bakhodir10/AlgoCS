@@ -41,7 +41,7 @@ public class DoubleLinkedList<E> {
                 else temp.next.prev = temp.prev;
                 if (temp.prev == null) head = temp.next;
                 else temp.prev.next = temp.next;
-                size++;
+                size--;
                 return true;
             }
             temp = temp.next;

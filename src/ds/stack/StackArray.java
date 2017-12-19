@@ -29,7 +29,7 @@ public class StackArray<E> {
     @SuppressWarnings("unchecked")
     public E peek() {
         if (size == 0) throw new NoSuchElementException();
-        return (E) arr[0];
+        return (E) arr[size - 1];
     }
 
     private void increase() {

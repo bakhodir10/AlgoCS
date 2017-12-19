@@ -1,13 +1,11 @@
 package ds.arraylist;
 
-import java.util.*;
-
 /*
-    implementation all methods of ArrayList
+    implementation methods of ArrayList
  */
 public class ArrayList<E> {
     private final int INITIAL_CAPACITY = 12;
-    private Object[] arr;
+    private transient Object[] arr;
     private int size;
 
     public ArrayList() {
@@ -18,6 +16,66 @@ public class ArrayList<E> {
         arr = new Object[initialCapacity];
     }
 
+    public void add(E elem) {
+        if (elem == null) throw new NullPointerException();
+        if (size == arr.length) resize();
+        arr[size++] = elem;
+    }
+
+    public void add(int index, E elem) {
+        checkRange(index);
+        if (elem == null) throw new NullPointerException();
+        if (size == arr.length) resize();
+
+        Object temp = arr[index];
+        arr[index] = elem;
+        for (int i = index + 1; i < size + 1; i++) {
+            Object val = arr[i];
+            arr[i] = temp;
+            temp = val;
+        }
+        size++;
+    }
+
+    @SuppressWarnings("unchecked")
+    public E remove(int index) {
+        checkRange(index);
+
+        Object oldValue = arr[index];
+        Object temp = arr[size];
+        arr[size] = null;
+        for (int i = size; i > index; i--) {
+            Object obj = arr[i - 1];
+            arr[i - 1] = temp;
+            temp = obj;
+        }
+        size--;
+        return (E) oldValue;
+    }
+
+    public boolean remove(E elem) {
+        if (elem == null) throw new NullPointerException();
+        int index = indexOf(elem);
+        if (index == -1) return false;
+
+        Object temp = arr[size];
+        arr[size] = null;
+        for (int i = size; i > index; i--) {
+            Object obj = arr[i - 1];
+            arr[i - 1] = temp;
+            temp = obj;
+        }
+        size--;
+        return true;
+    }
+
+    public int indexOf(E elem) {
+        for (int i = 0; i < size; i++) {
+            if (arr[i].equals(elem)) return i;
+        }
+        return -1;
+    }
+
     public int size() {
         return size;
     }
@@ -26,71 +84,29 @@ public class ArrayList<E> {
         return size == 0;
     }
 
-    public boolean contains(Object o) {
-        return false;
+    public boolean contains(E elem) {
+        return indexOf(elem) != -1;
     }
 
-    public Iterator<E> iterator() {
-        return null;
+
+    private void resize() {
+        Object[] temp = new Object[arr.length + INITIAL_CAPACITY];
+        System.arraycopy(arr, 0, temp, 0, arr.length);
+        arr = temp;
     }
 
-    public Object[] toArray() {
-        return new Object[0];
+    public String toString() {
+        StringBuilder b = new StringBuilder();
+        if (size == 0) return b.append("[]").toString();
+        b.append("[");
+        for (int i = 0; i < size - 1; i++) {
+            b.append(arr[i]).append(", ");
+        }
+        b.append(arr[size - 1]).append("]");
+        return b.toString();
     }
 
-    public <T> T[] toArray(T[] a) {
-        return null;
-    }
-
-    public boolean containsAll(Collection<?> c) {
-        return false;
-    }
-
-    public boolean addAll(Collection<? extends E> c) {
-        return false;
-    }
-
-    public boolean addAll(int index, Collection<? extends E> c) {
-        return false;
-    }
-
-    public boolean removeAll(Collection<?> c) {
-        return false;
-    }
-
-    public boolean retainAll(Collection<?> c) {
-        return false;
-    }
-
-    public void clear() {
-        arr = new Object[INITIAL_CAPACITY];
-    }
-
-    public E set(int index, E element) {
-        return null;
-    }
-
-    public void add(int index, E element) {
-
-    }
-
-    public E remove(int index) {
-        return null;
-    }
-
-    public int lastIndexOf(Object o) {
-        return 0;
-    }
-
-    public ListIterator<E> listIterator() {
-        return null;
-    }
-
-    public ListIterator<E> listIterator(int index) {
-        return null;
-    }
-
-    public List<E> subList(int fromIndex, int toIndex) {
-        return null;
+    private void checkRange(int index) {
+        if (index > size) throw new NullPointerException();
     }
 }

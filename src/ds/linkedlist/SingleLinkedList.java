@@ -119,13 +119,7 @@ public class SingleLinkedList<E> {
         }
     }
 
-    // to sort all nodes with insertion sort && this function works for only int type
-    public void selectionSort() {
-        Node temp = head;
-        Node sentinel = new Node(null, null);
-    }
-
-    // to delete all nodes whi are equal to given element
+    // to delete all nodes which are equal to given element
     public boolean deleteAll(E element) {
         Node temp = new Node(null, head);
         Node dummy = temp;

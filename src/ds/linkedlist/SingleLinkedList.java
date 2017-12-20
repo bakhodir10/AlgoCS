@@ -9,6 +9,51 @@ public class SingleLinkedList<E> {
     private Node head;
     private Node tail;
 
+    // to add a new element
+    public void add(E element) {
+        if (head == null) {
+            // if there is a no node, head and tail are the same node
+            head = tail = new Node(element);
+        } else {
+            tail.next = new Node(element);
+            tail = tail.next;
+        }
+        size++;
+    }
+
+    // to remove element from the nodes
+    public boolean remove(E element) {
+        Node temp = new Node(null, head);
+        Node dummy = temp;
+        while (temp.next != null) {
+            if (temp.next.value.equals(element)) {
+                // if found node is last node of the list, need to change tail
+                if (temp.next == tail) tail = temp;
+                temp.next = temp.next.next;
+                // if found node is first node if the list, need to change head
+                head = dummy.next;
+                size--;
+            }
+            // to move a step to forward
+            temp = temp.next;
+        }
+        // to return false result if there is not given element
+        return false;
+    }
+
+    // to remove an element from the nodes
+    public boolean remove() {
+        return removeFirst();
+    }
+
+    // to remove the first element from the nodes
+    public boolean removeFirst() {
+        if (head == null) return false;
+        head = head.next;
+        size--;
+        return true;
+    }
+    
     // to iterate all elements
     public void iterate() {
         Node temp = head;
@@ -29,38 +74,6 @@ public class SingleLinkedList<E> {
         }
         // to return value of the array found
         return temp.value;
-    }
-
-    // to add a new element
-    public void add(E element) {
-        if (head == null) {
-            // if there is a no node, head and tail are the same node
-            head = tail = new Node(element);
-        } else {
-            tail.next = new Node(element);
-            tail = tail.next;
-        }
-        size++;
-    }
-
-    // to delete element from the nodes
-    public boolean delete(E element) {
-        Node temp = new Node(null, head);
-        Node dummy = temp;
-        while (temp.next != null) {
-            if (temp.next.value.equals(element)) {
-                // if found node is last node of the list, need to change tail
-                if (temp.next == tail) tail = temp;
-                temp.next = temp.next.next;
-                // if found node is first node if the list, need to change head
-                head = dummy.next;
-                size--;
-            }
-            // to move a step to forward
-            temp = temp.next;
-        }
-        // to return false result if there is not given element
-        return false;
     }
 
     // to check whether node is empty or not
@@ -119,8 +132,8 @@ public class SingleLinkedList<E> {
         }
     }
 
-    // to delete all nodes which are equal to given element
-    public boolean deleteAll(E element) {
+    // to remove all nodes which are equal to given element
+    public boolean removeAll(E element) {
         Node temp = new Node(null, head);
         Node dummy = temp;
         while (temp != null && temp.next != null) {

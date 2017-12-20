@@ -22,17 +22,14 @@ public class DoubleLinkedList<E> {
         size++;
     }
 
-    // to get an element from the nodes
-    public E get(int index) {
-        if (index >= size || index < 0) throw new IndexOutOfBoundsException();
-        Node temp = head;
-        for (int i = 0; i < index; i++) temp = temp.next;
-        return temp.elem;
+    // to remove an element from the nodes
+    public boolean remove() {
+        return removeFirst();
     }
 
-    // to delete an element from the nodes
-    public boolean delete(E elem) {
-        if(elem == null) throw new NullPointerException();
+    // to remove an element from the nodes
+    public boolean remove(E elem) {
+        if (elem == null) throw new NullPointerException();
 
         Node temp = head;
         while (temp != null) {
@@ -48,6 +45,31 @@ public class DoubleLinkedList<E> {
         }
         return false;
     }
+    // to remove the first element from the nodes
+    public boolean removeFirst() {
+        if (head == null) return false;
+        head = head.next;
+        size--;
+        return true;
+    }
+
+    // to remove the last element from the nodes
+    public boolean removeLast() {
+        if (tail == null) return false;
+        if (tail.next != null) tail.next.prev = tail.prev;
+        if (tail.prev != null) tail.prev.next = tail.next;
+        size--;
+        return true;
+    }
+
+    // to get an element from the nodes
+    public E get(int index) {
+        if (index >= size || index < 0) throw new IndexOutOfBoundsException();
+        Node temp = head;
+        for (int i = 0; i < index; i++) temp = temp.next;
+        return temp.elem;
+    }
+
     // to iterate all elements
     public void iterate() {
         Node temp = head;

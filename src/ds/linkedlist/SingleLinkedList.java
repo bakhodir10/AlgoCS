@@ -111,16 +111,16 @@ public class SingleLinkedList<E> {
 
         while (temp != null) {
 
-            Node next_cell = temp;
+            Node nextNode = temp;
             temp = temp.next;
-            Node after_me = sentinel;
+            Node afterNode = sentinel;
 
-            while (after_me.next != null && (Integer) after_me.next.value < (Integer) next_cell.value) {
-                after_me = after_me.next;
+            while (afterNode.next != null && (Integer) afterNode.next.value < (Integer) nextNode.value) {
+                afterNode = afterNode.next;
             }
 
-            next_cell.next = after_me.next;
-            after_me.next = next_cell;
+            nextNode.next = afterNode.next;
+            afterNode.next = nextNode;
         }
 
         sentinel = sentinel.next;

@@ -39,15 +39,11 @@ public class ArrayList<E> {
 
     @SuppressWarnings("unchecked")
     public E remove(int index) {
-        checkRange(index);
+        if (size < 0) throw new NullPointerException();
 
         Object oldValue = arr[index];
-        Object temp = arr[size];
-        arr[size] = null;
-        for (int i = size; i > index; i--) {
-            Object obj = arr[i - 1];
-            arr[i - 1] = temp;
-            temp = obj;
+        for (int i = index; i < size - 1; i++) {
+            arr[i] = arr[i + 1];
         }
         size--;
         return (E) oldValue;
@@ -58,12 +54,8 @@ public class ArrayList<E> {
         int index = indexOf(elem);
         if (index == -1) return false;
 
-        Object temp = arr[size];
-        arr[size] = null;
-        for (int i = size; i > index; i--) {
-            Object obj = arr[i - 1];
-            arr[i - 1] = temp;
-            temp = obj;
+        for (int i = index; i < size - 1; i++) {
+            arr[i] = arr[i + 1];
         }
         size--;
         return true;

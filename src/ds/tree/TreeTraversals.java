@@ -41,8 +41,7 @@ public class TreeTraversals<E> {
 
     private class TreeNode {
         private E elem;
-        private TreeNode left;
-        private TreeNode right;
+        private TreeNode left, right;
 
         public TreeNode(E elem, TreeNode left, TreeNode right) {
             this.elem = elem;

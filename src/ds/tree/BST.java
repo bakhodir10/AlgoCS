@@ -3,7 +3,6 @@ package ds.tree;
 
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Queue;
 
 public class BST<E extends Comparable> implements Tree<E> {
 
@@ -31,12 +30,13 @@ public class BST<E extends Comparable> implements Tree<E> {
 
     @Override
     public boolean search(E elem) {
+        if (elem == null) return false;
         return find(root, elem);
     }
 
     @SuppressWarnings("unchecked")
     private boolean find(TreeNode n, E elem) {
-        if (n == null || elem == null) return false;
+        if (n == null) return false;
         if (n.elem.compareTo(elem) == 0) return true;
         if (n.elem.compareTo(elem) > 0) return find(n.left, elem);
         return find(n.right, elem);

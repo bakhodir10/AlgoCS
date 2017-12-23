@@ -6,18 +6,18 @@ import java.util.List;
 
 public class BST<T extends Comparable> implements Tree<T> {
 
-    private Node root;
+    private TreeNode root;
     private List<T> list = new LinkedList<>();
 
     @Override
     public void insert(T elem) {
-        Node newNode = new Node(elem);
+        TreeNode newNode = new TreeNode(elem);
         if (root == null) root = newNode;
         put(root, newNode);
     }
 
     @SuppressWarnings("unchecked")
-    private void put(Node n, Node newNode) {
+    private void put(TreeNode n, TreeNode newNode) {
         if (n.elem.compareTo(newNode.elem) > 0) {
             if (n.left == null) n.left = newNode;
             else put(n.left, newNode);
@@ -33,7 +33,7 @@ public class BST<T extends Comparable> implements Tree<T> {
     }
 
     @SuppressWarnings("unchecked")
-    private boolean find(Node n, T elem) {
+    private boolean find(TreeNode n, T elem) {
         if (n == null || elem == null) return false;
         if (n.elem.compareTo(elem) == 0) return true;
         if (n.elem.compareTo(elem) > 0) return find(n.left, elem);
@@ -50,7 +50,7 @@ public class BST<T extends Comparable> implements Tree<T> {
         inOrderTraversal(root);
     }
 
-    private void inOrderTraversal(Node n) {
+    private void inOrderTraversal(TreeNode n) {
         if (n == null) return;
         if (n.left != null) inOrderTraversal(n.left);
         System.out.println(n.elem);
@@ -62,22 +62,22 @@ public class BST<T extends Comparable> implements Tree<T> {
         return list;
     }
 
-    private void makeList(Node n) {
+    private void makeList(TreeNode n) {
         if (n == null) return;
         if (n.left != null) makeList(n.left);
         list.add(n.elem);
         if (n.right != null) makeList(n.right);
     }
 
-    private class Node {
+    private class TreeNode {
         private T elem;
-        private Node left, right;
+        private TreeNode left, right;
 
-        public Node(T elem) {
+        public TreeNode(T elem) {
             this.elem = elem;
         }
 
-        public Node(T elem, Node left, Node right) {
+        public TreeNode(T elem, TreeNode left, TreeNode right) {
             this.elem = elem;
             this.left = left;
             this.right = right;

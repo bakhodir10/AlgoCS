@@ -3,14 +3,16 @@ package ds.tree;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
-public class BST<T extends Comparable> implements Tree<T> {
+public class BST<E extends Comparable> implements Tree<E> {
 
     private TreeNode root;
-    private List<T> list = new LinkedList<>();
+    private List<E> list = new LinkedList<>();
 
     @Override
-    public void insert(T elem) {
+    public void insert(E elem) {
+        if (elem == null) return;
         TreeNode newNode = new TreeNode(elem);
         if (root == null) root = newNode;
         put(root, newNode);
@@ -28,12 +30,12 @@ public class BST<T extends Comparable> implements Tree<T> {
     }
 
     @Override
-    public boolean search(T elem) {
+    public boolean search(E elem) {
         return find(root, elem);
     }
 
     @SuppressWarnings("unchecked")
-    private boolean find(TreeNode n, T elem) {
+    private boolean find(TreeNode n, E elem) {
         if (n == null || elem == null) return false;
         if (n.elem.compareTo(elem) == 0) return true;
         if (n.elem.compareTo(elem) > 0) return find(n.left, elem);
@@ -41,7 +43,7 @@ public class BST<T extends Comparable> implements Tree<T> {
     }
 
     @Override
-    public void delete(T elem) {
+    public void delete(E elem) {
 
     }
 
@@ -57,7 +59,7 @@ public class BST<T extends Comparable> implements Tree<T> {
         if (n.right != null) inOrderTraversal(n.right);
     }
 
-    public List<T> asList() {
+    public List<E> asList() {
         makeList(root);
         return list;
     }
@@ -70,14 +72,14 @@ public class BST<T extends Comparable> implements Tree<T> {
     }
 
     private class TreeNode {
-        private T elem;
+        private E elem;
         private TreeNode left, right;
 
-        public TreeNode(T elem) {
+        public TreeNode(E elem) {
             this.elem = elem;
         }
 
-        public TreeNode(T elem, TreeNode left, TreeNode right) {
+        public TreeNode(E elem, TreeNode left, TreeNode right) {
             this.elem = elem;
             this.left = left;
             this.right = right;

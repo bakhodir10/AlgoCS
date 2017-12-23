@@ -1,12 +1,12 @@
 package ds.tree;
 
-public interface Tree<T> {
+public interface Tree<E> {
 
-    void insert(T elem);
+    void insert(E elem);
 
-    boolean search(T elem);
+    boolean search(E elem);
 
-    void delete(T elem);
+    void delete(E elem);
 
     void print();
 }

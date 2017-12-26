@@ -1,6 +1,6 @@
 package problems.easy;
 
-public class JudgeRouteCircle_657 {
+public class JudgeCircle_657 {
     public static boolean judgeCircle(String moves) {
         int count = 0;
 

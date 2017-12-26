@@ -1,6 +1,6 @@
 package problems.easy;
 
-public class SumOfSquareNumbers_633 {
+public class SumOfSqNumbs_633 {
     public static boolean judgeSquareSum(int c) {
         for (long a = 1; a * a <= c; a++) {
             long b = c - a * a;

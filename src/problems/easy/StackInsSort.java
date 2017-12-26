@@ -2,7 +2,7 @@ package problems.easy;
 
 import java.util.Stack;
 
-public class StackInsertionSort {
+public class StackInsSort {
     public static Stack<Integer> insertionSort(Stack<Integer> st) {
         Stack<Integer> tempSt = new Stack<>();
         while (st.size() != 0) {

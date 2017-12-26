@@ -1,6 +1,6 @@
 package problems.easy;
 
-public class MaxConsecutiveOnes_485 {
+public class MaxConsecutiv_485 {
     public static int findMaxConsecutiveOnes(int[] nums) {
         int max = Integer.MIN_VALUE;
         int k = 0;

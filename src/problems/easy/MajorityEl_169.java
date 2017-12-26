@@ -3,7 +3,7 @@ package problems.easy;
 import java.util.HashMap;
 import java.util.Map;
 
-public class MajorityElement_169 {
+public class MajorityEl_169 {
     public static int majorityElement(int[] nums) {
         Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {

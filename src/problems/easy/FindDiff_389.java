@@ -1,6 +1,6 @@
 package problems.easy;
 
-public class FindTheDifference_389 {
+public class FindDiff_389 {
     public static char findTheDifference(String s, String t) {
         char a[] = new char[26], b[] = new char[26];
         for (int i = 0; i < t.length(); i++) {

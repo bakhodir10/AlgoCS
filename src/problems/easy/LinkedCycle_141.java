@@ -1,6 +1,6 @@
 package problems.easy;
 
-public class LinkedListCycle_141 {
+public class LinkedCycle_141 {
 
     public boolean hasCycle(ListNode head) {
         if (head == null || head.next == null) return false;

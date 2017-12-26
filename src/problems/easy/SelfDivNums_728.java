@@ -3,7 +3,7 @@ package problems.easy;
 import java.util.LinkedList;
 import java.util.List;
 
-public class SelfDividingNumbers_728 {
+public class SelfDivNums_728 {
     public static List<Integer> selfDividingNumbers(int left, int right) {
         List<Integer> list = new LinkedList<>();
         for (int i = left; i <= right; i++) {

@@ -2,7 +2,7 @@ package problems.easy;
 
 import java.util.Arrays;
 
-public class DistributeCandies_575 {
+public class DistCandies_575 {
     public static int distributeCandies(int[] arr) {
         int differ = 1;
         Arrays.sort(arr);

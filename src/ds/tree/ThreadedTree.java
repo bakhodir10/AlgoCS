@@ -29,11 +29,12 @@ public class ThreadedTree<E extends Comparable<E>> {
         }
     }
 
-    public void inOrderTraversalWithThreads() {
-        printHelper(root);
+    public void print() {
+        inOrderTraversal(root);
+        reverseInOrderTraversal(root);
     }
 
-    private void printHelper(TreeNode<E> root) {
+    private void inOrderTraversal(TreeNode<E> root) {
         TreeNode<E> n = root;
         boolean viaChild = true;
         while (n != null) {
@@ -46,6 +47,26 @@ public class ThreadedTree<E extends Comparable<E>> {
             } else {
                 n = n.rightChild;
                 viaChild = true;
+            }
+        }
+    }
+
+    private void reverseInOrderTraversal(TreeNode<E> root) {
+        TreeNode<E> n = root;
+        boolean b = true;
+        while (n != null) {
+            if (b) {
+                while (n.rightChild != null) {
+                    n = n.rightChild;
+                }
+            }
+            System.out.print(n.elem + " ");
+            if (n.leftChild != null) {
+                n = n.leftChild;
+                b = true;
+            } else {
+                n = n.leftThread;
+                b = false;
             }
         }
     }

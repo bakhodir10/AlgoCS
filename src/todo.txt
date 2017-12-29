@@ -1,2 +1,31 @@
 Complexity of algorithm
 Linked List
+    a) Single linkedlist
+    b) Double linkedist
+    c) Sorted linkedlist
+    d) Linked list with loops
+Arrays
+    a) One dimensional
+    b) Two or more dimensional array
+Stack
+    a) Build up stack structure by using linkedlist
+    b) Build up stack structure by using arrays
+    c) Double stack
+Queue
+    a) Build up stack structure by using linkedlist
+    b) Build up stack structure by using arrays
+Sorting
+    a) O(N2) algorithms such as Insertion, Bubble, Selection sort
+    b) O(N*logN algorithms such as Heapsort, Quicksort, Mergesort
+    c) Sub O(N*logN) algorithms such as Countingsort, Bucketsort
+
+
+
+Tree
+    a) Tree Traversal: Preorder, inorder, postorder, depth-first
+    b) Sorted tree
+    c) Threaded three
+Balanced tree
+    a) AVL trees
+    b)2-3 trees
+    c) B-trees

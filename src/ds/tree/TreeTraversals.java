@@ -32,7 +32,7 @@ public class TreeTraversals<E> {
     }
 
     // parent ->  left -> right child
-    private void depthFirstTraversal(TreeNode n) {
+    private void breadthFirstTraversal(TreeNode n) {
         if (n == null) return;
         Queue<TreeNode> children = new LinkedList<>();
         children.add(root);
@@ -45,7 +45,7 @@ public class TreeTraversals<E> {
     }
 
     // parent -> right -> left child
-    private void depthFirstTraversal2(TreeNode n) {
+    private void breadthFirstTraversal2(TreeNode n) {
         if (n == null) return;
         Stack<TreeNode> children = new Stack<>();
         children.add(root);

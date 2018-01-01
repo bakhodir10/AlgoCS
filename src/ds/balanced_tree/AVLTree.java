@@ -1,16 +1,16 @@
 package ds.balanced_tree;
 
 public class AVLTree<E extends Comparable<E>> {
-    private TreeNode<E> root;
+    private AVLNode<E> root;
 
     public void insert(E elem) {
         if (elem == null) throw new IllegalArgumentException();
         root = insertHelper(root, elem);
     }
 
-    private TreeNode<E> insertHelper(TreeNode<E> n, E elem) {
+    private AVLNode<E> insertHelper(AVLNode<E> n, E elem) {
         // usual insert
-        if (n == null) return new TreeNode<>(elem);
+        if (n == null) return new AVLNode<>(elem);
         if (n.elem.compareTo(elem) > 0) n.left = insertHelper(n.left, elem);
         else if (n.elem.compareTo(elem) < 0) n.right = insertHelper(n.right, elem);
 
@@ -43,16 +43,16 @@ public class AVLTree<E extends Comparable<E>> {
         helper(root);
     }
 
-    private void helper(TreeNode<E> root) {
+    private void helper(AVLNode<E> root) {
         if (root == null) return;
         System.out.println(root.elem);
         if (root.left != null) helper(root.left);
         if (root.right != null) helper(root.right);
     }
 
-    private TreeNode<E> rightRotate(TreeNode<E> y) {
-        TreeNode<E> x = y.left;
-        TreeNode<E> z = x.right;
+    private AVLNode<E> rightRotate(AVLNode<E> y) {
+        AVLNode<E> x = y.left;
+        AVLNode<E> z = x.right;
 
         //rotation
         x.right = y;
@@ -63,9 +63,9 @@ public class AVLTree<E extends Comparable<E>> {
         return x;
     }
 
-    private TreeNode<E> leftRotate(TreeNode<E> x) {
-        TreeNode<E> y = x.right;
-        TreeNode<E> z = y.left;
+    private AVLNode<E> leftRotate(AVLNode<E> x) {
+        AVLNode<E> y = x.right;
+        AVLNode<E> z = y.left;
 
         // rotation
         y.left = x;
@@ -76,7 +76,7 @@ public class AVLTree<E extends Comparable<E>> {
         return y;
     }
 
-    private int height(TreeNode<E> n) {
+    private int height(AVLNode<E> n) {
         return n == null ? -1 : n.height;
     }
 
@@ -84,17 +84,16 @@ public class AVLTree<E extends Comparable<E>> {
         return a > b ? a : b;
     }
 
-    private int getBalance(TreeNode<E> n) {
+    private int getBalance(AVLNode<E> n) {
         return n == null ? 0 : height(n.left) - height(n.right);
     }
 
-
-    private class TreeNode<E> {
+    private class AVLNode<E> {
         private int height;
         private E elem;
-        private TreeNode<E> left, right;
+        private AVLNode<E> left, right;
 
-        public TreeNode(E elem) {
+        public AVLNode(E elem) {
             this.elem = elem;
         }
     }

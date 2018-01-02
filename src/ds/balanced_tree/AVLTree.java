@@ -3,6 +3,44 @@ package ds.balanced_tree;
 public class AVLTree<E extends Comparable<E>> {
     private AVLNode<E> root;
 
+    private int height(AVLNode<E> n) {
+        return n == null ? -1 : n.height;
+    }
+
+    private int max(int a, int b) {
+        return a > b ? a : b;
+    }
+
+    private int getBalance(AVLNode<E> n) {
+        return n == null ? 0 : height(n.left) - height(n.right);
+    }
+
+    private AVLNode<E> leftRotate(AVLNode<E> x) {
+        AVLNode<E> y = x.right;
+        AVLNode<E> z = y.left;
+
+        // rotation
+        y.left = x;
+        x.right = z;
+
+        y.height = max(height(y.left), height(y.right)) + 1;
+        x.height = max(height(x.left), height(x.right)) + 1;
+        return y;
+    }
+
+    private AVLNode<E> rightRotate(AVLNode<E> y) {
+        AVLNode<E> x = y.left;
+        AVLNode<E> z = x.right;
+
+        //rotation
+        x.right = y;
+        y.left = z;
+
+        x.height = max(height(x.left), height(x.right)) + 1;
+        y.height = max(height(y.left), height(y.right)) + 1;
+        return x;
+    }
+
     public void insert(E elem) {
         if (elem == null) throw new IllegalArgumentException();
         root = insertHelper(root, elem);
@@ -21,7 +59,6 @@ public class AVLTree<E extends Comparable<E>> {
         int balance = getBalance(n);
 
         // if it is not balanced, there are 4 types.
-
         // left-left case
         if (balance > 1 && n.elem.compareTo(elem) > 0) return rightRotate(n);
             // right-right case
@@ -37,55 +74,6 @@ public class AVLTree<E extends Comparable<E>> {
             return leftRotate(n);
         }
         return n;
-    }
-    
-    public void traverse() {
-        helper(root);
-    }
-
-    private void helper(AVLNode<E> root) {
-        if (root == null) return;
-        System.out.println(root.elem);
-        if (root.left != null) helper(root.left);
-        if (root.right != null) helper(root.right);
-    }
-
-    private AVLNode<E> rightRotate(AVLNode<E> y) {
-        AVLNode<E> x = y.left;
-        AVLNode<E> z = x.right;
-
-        //rotation
-        x.right = y;
-        y.left = z;
-
-        x.height = max(height(x.left), height(x.right)) + 1;
-        y.height = max(height(y.left), height(y.right)) + 1;
-        return x;
-    }
-
-    private AVLNode<E> leftRotate(AVLNode<E> x) {
-        AVLNode<E> y = x.right;
-        AVLNode<E> z = y.left;
-
-        // rotation
-        y.left = x;
-        x.right = z;
-
-        y.height = max(height(y.left), height(y.right)) + 1;
-        x.height = max(height(x.left), height(x.right)) + 1;
-        return y;
-    }
-
-    private int height(AVLNode<E> n) {
-        return n == null ? -1 : n.height;
-    }
-
-    private int max(int a, int b) {
-        return a > b ? a : b;
-    }
-
-    private int getBalance(AVLNode<E> n) {
-        return n == null ? 0 : height(n.left) - height(n.right);
     }
 
     private class AVLNode<E> {

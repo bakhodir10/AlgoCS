@@ -3,15 +3,18 @@ package ds.tree;
 public class DeleteNodeInBST<E extends Comparable<E>> {
     private TreeNode<E> root;
 
-    //first approach
-    private TreeNode<E> deleteHelper1(TreeNode<E> node, E elem) {
+    public void delete(E elem) {
+        root = deleteHelper(root, elem);
+    }
+
+    private TreeNode<E> deleteHelper(TreeNode<E> node, E elem) {
         if (node == null) return null;
         else switch (elem.compareTo(node.elem)) {
             case 1:
-                node.right = deleteHelper1(node.right, elem);
+                node.right = deleteHelper(node.right, elem);
                 break;
             case -1:
-                node.left = deleteHelper1(node.left, elem);
+                node.left = deleteHelper(node.left, elem);
                 break;
             default:
                 if (node.left == null) node = node.right;
@@ -30,14 +33,6 @@ public class DeleteNodeInBST<E extends Comparable<E>> {
         }
         return node;
     }
-
-    public void delete1(E elem) {
-        root = deleteHelper1(root, elem);
-    }
-
-    // ***************************************************************************
-
-    //the second approach
 
     private class TreeNode<E> {
         private E elem;

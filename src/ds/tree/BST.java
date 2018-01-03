@@ -9,24 +9,19 @@ public class BST<E extends Comparable<E>> {
     private List<E> list = new LinkedList<>();
 
     public void insert(E elem) {
-        if (elem == null) return;
-        TreeNode<E> newNode = new TreeNode<>(elem);
-        if (root == null) root = newNode;
-        insertHelper(root, newNode);
+        if (elem == null) throw new IllegalArgumentException();
+        root = insertHelper(root, elem);
     }
 
-    private void insertHelper(TreeNode<E> n, TreeNode<E> newNode) {
-        if (n.elem.compareTo(newNode.elem) > 0) {
-            if (n.left == null) n.left = newNode;
-            else insertHelper(n.left, newNode);
-        } else if (n.elem.compareTo(newNode.elem) < 0) {
-            if (n.right == null) n.right = newNode;
-            else insertHelper(n.right, newNode);
-        }
+    private TreeNode<E> insertHelper(TreeNode<E> n, E elem) {
+        if (n == null) return new TreeNode<>(elem);
+        if (n.elem.compareTo(elem) > 0) n.left = insertHelper(n.left, elem);
+        if (n.elem.compareTo(elem) < 0) n.right = insertHelper(n.right, elem);
+        return n;
     }
 
     public boolean find(E elem) {
-        if (elem == null) return false;
+        if (elem == null) throw new IllegalArgumentException();
         return findHelper(root, elem);
     }
 
@@ -38,64 +33,49 @@ public class BST<E extends Comparable<E>> {
     }
 
     public void delete(E elem) {
-        if (elem == null) return;
-        deleteHelper(root, root, elem);
+        if (elem == null) throw new IllegalArgumentException();
+        deleteHelper(root, elem);
     }
 
-    private void deleteHelper(TreeNode<E> parent, TreeNode<E> n, E elem) {
-        if (n == null) return; // the base case
-        if (n.elem.compareTo(elem) > 0) deleteHelper(n, n.left, elem);
-        else if (n.elem.compareTo(elem) < 0) deleteHelper(n, n.right, elem);
-        else { // found, now let's remove it
-            if (n.left == null && n.right == null) {   // case 1: if the node has no child
-                deleteCase1(parent, n);
-            } else if (n.left == null || n.right == null) {// case 2: if the node has only one child
-                deleteCase2(parent, n);
-            } else {  // case 3: if the node has two child
-                deleteCase3(parent, n);
+    private TreeNode<E> deleteHelper(TreeNode<E> node, E elem) {
+        if (node.elem.compareTo(elem) > 0) node.left = deleteHelper(node.left, elem);
+        else if (node.elem.compareTo(elem) < 0) node.right = deleteHelper(node.right, elem);
+        else {                                             // found, now let's remove it
+            if (node.left == null && node.right == null) {
+                node = null;                               // case 1: if the node has no child
+            } else if (node.left == null || node.right == null) {
+                if (node.left != null) node = node.left;   // case 2: if the node has only one child
+                else node = node.right;
+            } else {                                       // case 3: if the node has two child
+                TreeNode<E> p = node.left;
+                if (p.right != null) {
+                    while (p.right.right != null) p = p.right;
+                    node.elem = p.right.elem;
+                    p.right = null;
+                } else {
+                    p.right = node.right;
+                    node = p;
+                }
             }
         }
+        return node;
     }
 
-    private void deleteCase1(TreeNode<E> parent, TreeNode<E> n) {
-        System.out.println("case 1");
-        if (parent.left.elem.compareTo(n.elem) == 0) parent.left = null;
-        else parent.right = null;
-    }
-
-    private void deleteCase2(TreeNode<E> parent, TreeNode<E> n) {
-        System.out.println("case 2");
-        if (parent.left.elem.compareTo(n.elem) == 0)
-            parent.left = n.left != null ? n.left : n.right;
-        else parent.right = n.right != null ? n.right : n.left;
-    }
-
-    // todo not finished
-    // 11 17 23 24 30 35 42 60 63 68 69 76 80, delete -> 17
-    private void deleteCase3(TreeNode<E> parent, TreeNode<E> n) {
-        System.out.println("case 3");
-        TreeNode<E> minRight = minRightTraversal(n, n.left);
-        System.out.println(parent.elem);
-//        System.out.println(minRight.elem);
-        parent.left.elem = minRight.right.elem;
-        minRight.right = null;
-    }
-
-    private TreeNode<E> minRightTraversal(TreeNode<E> p, TreeNode<E> n) {
+    private TreeNode<E> minRight(TreeNode<E> p, TreeNode<E> n) {
         if (n.right == null) return p;
         p = n;
-        return minRightTraversal(p, n.right);
+        return minRight(p, n.right);
     }
 
     public void print() {
-        inOrderTraversal(root);
+        traverse(root);
     }
 
-    private void inOrderTraversal(TreeNode<E> n) {
+    private void traverse(TreeNode<E> n) {
         if (n == null) return;
-        if (n.left != null) inOrderTraversal(n.left);
         System.out.print(n.elem + " ");
-        if (n.right != null) inOrderTraversal(n.right);
+        if (n.left != null) traverse(n.left);
+        if (n.right != null) traverse(n.right);
     }
 
     public List<E> asList() {

@@ -1,15 +1,27 @@
 package problems.medium;
 
-// todo not done
 public class RotateList_61 {
-
     public ListNode rotateRight(ListNode head, int k) {
-        ListNode temp = head;
-        int i = 0;
-        while (i < k) {
-            temp = temp.next;
+        if (head == null) return null;
+        ListNode newNode, tail;
+        newNode = tail = head;
+        int size = 1;
+        while (tail.next != null) {
+            tail = tail.next;
+            size++;
         }
-        return null;
+        k %= size;
+        tail.next = head;
+
+        if (k != 0) {
+            for (int i = 0; i < size - k; i++) {
+                tail = tail.next;
+            }
+        }
+
+        newNode = tail.next;
+        tail.next = null;
+        return newNode;
     }
 
     private class ListNode {

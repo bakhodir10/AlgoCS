@@ -98,6 +98,26 @@ public class BST<E extends Comparable<E>> {
         return list;
     }
 
+    public E getMax() {
+        if (root == null) throw new NullPointerException();
+        return getMaxHelper(root).elem;
+    }
+
+    private TreeNode<E> getMaxHelper(TreeNode<E> node) {
+        if (node.right != null) node = getMaxHelper(node.right);
+        return node;
+    }
+
+    public E getMin() {
+        if (root == null) throw new NullPointerException();
+        return getMinHelper(root).elem;
+    }
+
+    private TreeNode<E> getMinHelper(TreeNode<E> node) {
+        if (node.left != null) node = getMinHelper(node.left);
+        return node;
+    }
+
     private void makeList(TreeNode<E> n) {
         if (n == null) return;
         if (n.left != null) makeList(n.left);

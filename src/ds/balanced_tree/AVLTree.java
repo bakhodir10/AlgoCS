@@ -1,5 +1,25 @@
 package ds.balanced_tree;
 
+/*
+ An AVL tree is a sorted binary tree in which the heights of two subtrees at any
+ given node differ by at most 1
+ Space:
+  Best case: O(N)
+  Worst case: O(N)
+ Time complexity:
+  Building binary tree:
+   Best case: O(logN)
+   Worst case: O(logN)
+
+   Best case:
+    Searching element: O(logN)
+    Adding element: O(logN)   -> to add, find new element position where belongs to
+    Delete element: O(logN)   -> to add, find new element position where belongs to
+   Worst case:
+    Searching element: O(logN) -> every element sorted order
+    Adding element: O(logN)
+    Delete element: O(logN)
+ */
 @SuppressWarnings("Duplicates")
 public class AVLTree<E extends Comparable<E>> {
     private AVLNode<E> root;

@@ -3,6 +3,21 @@ package ds.tree;
 import java.util.LinkedList;
 import java.util.List;
 
+/*
+    Time complexity:
+    Building binary tree:
+     Best case: O(logN)
+     Worst case: O(N2)
+
+     Best case:
+      Searching element: O(logN)
+      Adding element: O(logN)   -> to add, find new element position where belongs to
+      Delete element: O(logN)   -> to add, find new element position where belongs to
+     Worst case:
+      Searching element: O(N) -> in case binary tree is very tall and every element only one child
+      Adding element: O(N)    -> to add, find new element position where belongs to and searching takes O(N)
+      Delete element: O(N)    -> to add, find new element position where belongs to and searching takes O(N)
+ */
 public class BST<E extends Comparable<E>> {
 
     private TreeNode<E> root;

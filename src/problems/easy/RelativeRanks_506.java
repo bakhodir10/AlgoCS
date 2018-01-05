@@ -3,11 +3,6 @@ package problems.easy;
 import java.util.*;
 
 public class RelativeRanks_506 {
-    public static void main(String[] args) {
-        RelativeRanks_506 r = new RelativeRanks_506();
-        System.out.println(Arrays.toString(r.findRelativeRanks(new int[]{5, 4, 3, 2, 1})));
-    }
-
     public String[] findRelativeRanks(int[] nums) {
         String s[] = new String[nums.length];
         Map<Integer, Integer> map = new HashMap<>();

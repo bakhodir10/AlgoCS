@@ -1,5 +1,6 @@
 package ds.tree;
 
+@SuppressWarnings("Duplicates")
 public class DeleteNodeInBST<E extends Comparable<E>> {
     private TreeNode<E> root;
 
@@ -8,28 +9,26 @@ public class DeleteNodeInBST<E extends Comparable<E>> {
     }
 
     private TreeNode<E> deleteHelper(TreeNode<E> node, E elem) {
-        if (node == null) return null;
-        else switch (elem.compareTo(node.elem)) {
-            case 1:
-                node.right = deleteHelper(node.right, elem);
-                break;
-            case -1:
-                node.left = deleteHelper(node.left, elem);
-                break;
-            default:
-                if (node.left == null) node = node.right;
-                else if (node.right == null) node = node.left;
-                else {
-                    TreeNode<E> p = node.left;
-                    if (p.right != null) {
-                        while (p.right.right != null) p = p.right;
-                        node.elem = p.right.elem;
-                        p.right = null;
-                    } else {
-                        p.right = node.right;
-                        node = p;
-                    }
-                }
+        if (node.elem.compareTo(elem) > 0) node.left = deleteHelper(node.left, elem);
+        else if (node.elem.compareTo(elem) < 0) node.right = deleteHelper(node.right, elem);
+        else {                                             // found, now let's remove it
+            if (node.left == null && node.right == null) {
+                node = null;                               // case 1: if the node has no child
+            } else if (node.left == null || node.right == null) {
+                if (node.left != null) node = node.left;   // case 2: if the node has only one child
+                else node = node.right;
+            } else {                                       // case 3: if the node has two child
+                TreeNode<E> p = findMin(node.left);
+                root.elem = p.elem;
+                node.left = deleteHelper(node.left, p.elem);
+            }
+        }
+        return node;
+    }
+
+    private TreeNode<E> findMin(TreeNode<E> node) {
+        while (node.right != null) {
+            node = node.right;
         }
         return node;
     }

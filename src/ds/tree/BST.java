@@ -18,6 +18,7 @@ import java.util.List;
       Adding element: O(N)    -> to add, find new element position where belongs to and searching takes O(N)
       Delete element: O(N)    -> to add, find new element position where belongs to and searching takes O(N)
  */
+@SuppressWarnings("Duplicates")
 public class BST<E extends Comparable<E>> {
 
     private TreeNode<E> root;
@@ -62,16 +63,17 @@ public class BST<E extends Comparable<E>> {
                 if (node.left != null) node = node.left;   // case 2: if the node has only one child
                 else node = node.right;
             } else {                                       // case 3: if the node has two child
-                TreeNode<E> p = node.left;
-                if (p.right != null) {
-                    while (p.right.right != null) p = p.right;
-                    node.elem = p.right.elem;
-                    p.right = null;
-                } else {
-                    p.right = node.right;
-                    node = p;
-                }
+                TreeNode<E> p = findMin(node.left);
+                root.elem = p.elem;
+                node.left = deleteHelper(node.left, p.elem);
             }
+        }
+        return node;
+    }
+
+    private TreeNode<E> findMin(TreeNode<E> node) {
+        while (node.right != null) {
+            node = node.right;
         }
         return node;
     }

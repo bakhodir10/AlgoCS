@@ -63,9 +63,9 @@ public class InsertNodeInAVLTree<E extends Comparable<E>> {
 
         // if it is not balanced, there are 4 types.
         // left-left case
-        if (balance > 1 && n.elem.compareTo(elem) > 0) return rightRotate(n);
+        if (balance > 1 && n.left.elem.compareTo(elem) > 0) return rightRotate(n);
             // right-right case
-        else if (balance < -1 && n.elem.compareTo(elem) < 0) return leftRotate(n);
+        else if (balance < -1 && n.right.elem.compareTo(elem) < 0) return leftRotate(n);
             //left-right case
         else if (balance > 1 && n.left.elem.compareTo(elem) < 0) {
             n.left = leftRotate(n.left);

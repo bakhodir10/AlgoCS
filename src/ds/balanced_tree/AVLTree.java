@@ -81,9 +81,9 @@ public class AVLTree<E extends Comparable<E>> {
 
         // if it is not balanced, there are 4 types.
         // left-left case
-        if (balance > 1 && n.elem.compareTo(elem) > 0) return rightRotate(n);
+        if (balance > 1 && n.left.elem.compareTo(elem) > 0) return rightRotate(n);
             // right-right case
-        else if (balance < -1 && n.elem.compareTo(elem) < 0) return leftRotate(n);
+        else if (balance < -1 && n.right.elem.compareTo(elem) < 0) return leftRotate(n);
             //left-right case
         else if (balance > 1 && n.left.elem.compareTo(elem) < 0) {
             n.left = leftRotate(n.left);
@@ -98,53 +98,55 @@ public class AVLTree<E extends Comparable<E>> {
     }
 
     public void delete(E elem) {
-        if (elem == null || root == null) throw new IllegalArgumentException();
+        if (elem == null) throw new IllegalArgumentException();
         root = deleteHelper(root, elem);
     }
 
     private AVLNode<E> deleteHelper(AVLNode<E> node, E elem) {
-        // usual delete node from tree
         if (node.elem.compareTo(elem) > 0) node.left = deleteHelper(node.left, elem);
-        if (node.elem.compareTo(elem) < 0) node.right = deleteHelper(node.right, elem);
-        else {
-            if (node.left == null && node.right == null) {        // case 1: the node has no child
-                node = null;
-            } else if (node.left == null || node.right == null) { // case 2: the node has a child
-                if (node.left != null) node = node.left;
+        else if (node.elem.compareTo(elem) < 0) node.right = deleteHelper(node.right, elem);
+        else {                                             // found, now let's remove it
+            if (node.left == null && node.right == null) {
+                node = null;                               // case 1: if the node has no child
+            } else if (node.left == null || node.right == null) {
+                if (node.left != null) node = node.left;   // case 2: if the node has only one child
                 else node = node.right;
-            } else {                                              // case 3: the node has two child
-                AVLNode<E> p = node.left;
-                if (p.right != null) {
-                    while (p.right.right != null) p = p.right;
-                    node.elem = p.right.elem;
-                    p.right = null;
-                } else {
-                    p.right = node.right;
-                    node = p;
-                }
-                node.height = max(height(node.left), height(node.right)) + 1;
-                int balance = getBalance(node);
-
-                // if the node is not balanced
-                // left-left case
-                if (balance > -1 && getBalance(node.left) >= 0) {
-                    return rightRotate(node);
-                }
-                // left-right case
-                if (balance > -1 && getBalance(node.left) < 0) {
-                    node.left = leftRotate(node);
-                    return rightRotate(node);
-                }
-                // right-right case
-                if (balance < -1 && getBalance(node.right) <= 0) {
-                    return leftRotate(node);
-                }
-                // right-left case
-                if (balance < -1 && getBalance(node.right) > -1) {
-                    node.right = rightRotate(node);
-                    return leftRotate(node);
-                }
+            } else {                                       // case 3: if the node has two child
+                AVLNode<E> p = findMin(node.left);
+                node.elem = p.elem;
+                node.left = deleteHelper(node.left, p.elem);
             }
+        }
+
+        if (node == null) return null;
+        node.height = max(height(node.left), height(node.right)) + 1;
+        int balance = getBalance(node);
+
+        // Left Left Case
+        if (balance > 1 && getBalance(root.left) >= 0)
+            return rightRotate(root);
+
+        // Left Right Case
+        if (balance > 1 && getBalance(root.left) < 0) {
+            root.left = leftRotate(root.left);
+            return rightRotate(root);
+        }
+
+        // Right Right Case
+        if (balance < -1 && getBalance(root.right) <= 0)
+            return leftRotate(root);
+
+        // Right Left Case
+        if (balance < -1 && getBalance(root.right) > 0) {
+            root.right = rightRotate(root.right);
+            return leftRotate(root);
+        }
+        return node;
+    }
+
+    private AVLNode<E> findMin(AVLNode<E> node) {
+        while (node.right != null) {
+            node = node.right;
         }
         return node;
     }

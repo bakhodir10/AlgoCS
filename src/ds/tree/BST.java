@@ -17,6 +17,8 @@ import java.util.List;
       Searching element: O(N) -> in case binary tree is very tall and every element only one child
       Adding element: O(N)    -> to add, find new element position where belongs to and searching takes O(N)
       Delete element: O(N)    -> to add, find new element position where belongs to and searching takes O(N)
+
+      Note that this class doesn't provide duplicate elements, for that check BSTWithDuplicate class out
  */
 @SuppressWarnings("Duplicates")
 public class BST<E extends Comparable<E>> {
@@ -54,6 +56,7 @@ public class BST<E extends Comparable<E>> {
     }
 
     private TreeNode<E> deleteHelper(TreeNode<E> node, E elem) {
+        if (node == null) return null;
         if (node.elem.compareTo(elem) > 0) node.left = deleteHelper(node.left, elem);
         else if (node.elem.compareTo(elem) < 0) node.right = deleteHelper(node.right, elem);
         else {                                             // found, now let's remove it

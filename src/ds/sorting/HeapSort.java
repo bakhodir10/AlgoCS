@@ -1,5 +1,13 @@
 package ds.sorting;
 
+/*
+Data structure: Array
+Worst-case performance: O(NlogN)
+Best-case performance: O(N)
+Average performance: O(NlogN)
+Worst-case space complexity: O(1) auxiliary
+ */
+
 public class HeapSort {
     public int arr[];
 
@@ -8,7 +16,7 @@ public class HeapSort {
     }
 
     // to make a heap
-    public void makeHeap() {
+    private void makeHeap() {
         for (int i = 0; i < arr.length; i++) {
             // index of child element
             int index = i;
@@ -25,7 +33,7 @@ public class HeapSort {
     }
 
     // to remove item from the top of the binary tree -> arr[0]
-    public void removeTopItem(int count) {
+    private void removeTopItem(int count) {
         int a = arr[0];
         arr[0] = arr[count];
         arr[count] = a;

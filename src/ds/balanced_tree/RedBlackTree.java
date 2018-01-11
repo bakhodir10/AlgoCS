@@ -1,5 +1,14 @@
 package ds.balanced_tree;
 
+/*
+Red-Black Tree is a self-balancing Binary Search Tree (BST) where every node follows following rules.
+
+1) Every node has a color either red or black.
+2) Root of tree is always black.
+3) There are no two adjacent red nodes (A red node cannot have a red parent or red child).
+4) Every path from root to a NULL node has same number of black nodes.
+
+ */
 public class RedBlackTree<E extends Comparable<E>> {
     private RBNode<E> root;
 
@@ -62,7 +71,6 @@ public class RedBlackTree<E extends Comparable<E>> {
     }
 
     private RBNode<E> leftRotate(RBNode<E> n, RBNode<E> pt, boolean changeColor) {
-
         RBNode<E> pt_right = pt.right;
         pt.right = pt_right.left;
         if (pt.right != null) pt.right.parent = pt;
@@ -110,24 +118,6 @@ public class RedBlackTree<E extends Comparable<E>> {
         if (node.elem.compareTo(elem) == 0) return true;
         if (node.elem.compareTo(elem) > 0) return findHelper(node.left, elem);
         else return findHelper(node.right, elem);
-    }
-
-    public E getMin() {
-        return getMinHelper(root);
-    }
-
-    private E getMinHelper(RBNode<E> node) {
-        if (node.left != null) return getMinHelper(node.left);
-        else return node.elem;
-    }
-
-    public E getMax() {
-        return getMaxHelper(root);
-    }
-
-    private E getMaxHelper(RBNode<E> node) {
-        if (node.right != null) return getMaxHelper(node.right);
-        else return node.elem;
     }
 
     private class RBNode<E> {

@@ -3,15 +3,15 @@ package problems.easy;
 import java.util.Stack;
 
 public class QueueUsingStack_232 {
-    private Stack<Integer> st, helper;
-    private int i = 0, peek = 0;
+    private Stack<Integer> st, temp;
+    private int i = 0, lasElement = 0;
 
     /**
      * Initialize your data structure here.
      */
     public QueueUsingStack_232() {
         st = new Stack<>();
-        helper = new Stack<>();
+        temp = new Stack<>();
     }
 
     /**
@@ -19,7 +19,7 @@ public class QueueUsingStack_232 {
      */
     public void push(int x) {
         st.push(x);
-        if (i == 0) peek = x;
+        if (i == 0) lasElement = x;
         i++;
     }
 
@@ -27,12 +27,12 @@ public class QueueUsingStack_232 {
      * Removes the element from in front of queue and returns that element.
      */
     public int pop() {
-        helper.clear();
-        while (!st.isEmpty()) helper.push(st.pop());
+        temp.clear();
+        while (!st.isEmpty()) temp.push(st.pop());
         int x = 0;
-        if (!helper.isEmpty()) x = helper.pop();
-        if (!helper.isEmpty()) peek = helper.peek();
-        while (!helper.isEmpty()) st.push(helper.pop());
+        if (!temp.isEmpty()) x = temp.pop();
+        if (!temp.isEmpty()) lasElement = temp.peek();
+        while (!temp.isEmpty()) st.push(temp.pop());
         i--;
         return x;
     }
@@ -41,7 +41,7 @@ public class QueueUsingStack_232 {
      * Get the front element.
      */
     public int peek() {
-        return peek;
+        return lasElement;
     }
 
     /**

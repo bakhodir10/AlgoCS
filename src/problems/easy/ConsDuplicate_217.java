@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
-public class ContainsDuplicate_217 {
+public class ConsDuplicate_217 {
 
     // approach 1
     public boolean containsDuplicate1(int[] nums) {

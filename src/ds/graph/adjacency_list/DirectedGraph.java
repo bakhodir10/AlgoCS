@@ -37,6 +37,11 @@ public class DirectedGraph<E> {
         if (this.vertices.containsKey(elem)) this.vertices.put(elem, new HashSet<>());
     }
 
+    // remove all vertices/nodes
+    public void deleteAllVertices() {
+        this.vertices = new HashMap<>();
+    }
+
     // print all vertices with its edges
     public void print() {
         this.vertices.forEach((key, value) ->

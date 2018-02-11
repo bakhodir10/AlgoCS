@@ -29,3 +29,11 @@ Balanced tree
     a) AVL trees
     b)2-3 trees
     c) B-trees
+
+Graph
+    a) Directed graph
+     - adjacency list
+     - adjacency matrix
+    b) UnDirected graph
+     - adjacency list
+     - adjacency matrix

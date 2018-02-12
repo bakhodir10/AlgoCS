@@ -4,7 +4,9 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
+import java.util.stream.Collectors;
 
+@SuppressWarnings("Duplicates")
 public class DirectedGraph<V> {
 
     // key -> data of vertex/node
@@ -19,8 +21,16 @@ public class DirectedGraph<V> {
     // add vertex/node with set of edges
     public void addEdge(V vertex, Set<V> edges) {
         if (vertex == null) throw new NullPointerException("Vertex cannot be null");
-        if (this.vertices.containsKey(vertex)) this.vertices.get(vertex).addAll(edges);
-        else this.vertices.put(vertex, edges);
+        if (edges == null) edges = new HashSet<>();
+
+        Set<V> filter = edges.stream().filter(e -> {
+            boolean b = vertices.containsKey(e);
+            if (b) return true;
+            else throw new NullPointerException("The edge " + e + " that is being added is not exist");
+        }).collect(Collectors.toSet());
+
+        if (this.vertices.containsKey(vertex)) this.vertices.get(vertex).addAll(filter);
+        else this.vertices.put(vertex, filter);
     }
 
     // get edges of the vertex/node
@@ -32,17 +42,31 @@ public class DirectedGraph<V> {
 
     // remove the given a vertex/node
     public boolean deleteVertex(V vertex) {
-        Set<V> set = this.vertices.get(vertex);
-        if (set == null) throw new NullPointerException("There is no vertex regarding to given input");
-        return this.vertices.remove(vertex) != null;
+        boolean exist = this.vertices.containsKey(vertex);
+        if (exist) {
+            this.vertices.remove(vertex);
+            for (Map.Entry<V, Set<V>> map : vertices.entrySet()) {
+                map.getValue().remove(vertex);
+            }
+            return true;
+        } else return false;
+    }
+
+    // remove an edge of given a vertex/node
+    public boolean deleteEdgeOfVertex(V vertex, V edge) {
+        boolean exist = this.vertices.containsKey(vertex);
+        if (exist) {
+            return this.vertices.get(vertex).remove(edge);
+        } else return false;
     }
 
     // remove all edges of the vertex/node
     public boolean deleteAllEdges(V vertex) {
-        if (this.vertices.containsKey(vertex)) {
+        boolean exist = this.vertices.containsKey(vertex);
+        if (exist) {
             this.vertices.put(vertex, new HashSet<>());
             return true;
-        } else throw new NullPointerException("There is no vertex regarding to given input");
+        } else return false;
     }
 
     // remove all vertices/nodes

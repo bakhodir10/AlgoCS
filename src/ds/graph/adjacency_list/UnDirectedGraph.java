@@ -18,8 +18,15 @@ public class UnDirectedGraph<V> {
         this.vertices = new HashMap<>();
     }
 
+    // add vertex/node with an edge
+    public void addEdge(V vertex, V edge) {
+        Set<V> edges = new HashSet<>();
+        edges.add(edge);
+        this.addEdges(vertex, edges);
+    }
+
     // add vertex/node with set of edges
-    public void addEdge(V vertex, Set<V> edges) {
+    public void addEdges(V vertex, Set<V> edges) {
         if (vertex == null) throw new NullPointerException("Vertex cannot be null");
         if (edges == null) edges = new HashSet<>();
 

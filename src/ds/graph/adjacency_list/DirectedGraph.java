@@ -18,7 +18,12 @@ public class DirectedGraph<V> {
         this.vertices = new HashMap<>();
     }
 
-    // add vertex/node with an edge
+    // add vertex/node without any edge
+    public void addEdge(V vertex) {
+        this.addEdges(vertex, new HashSet<>());
+    }
+
+    // add vertex with an edge to given particular vertex
     public void addEdge(V from, V to) {
         Set<V> edges = new HashSet<>();
         edges.add(to);

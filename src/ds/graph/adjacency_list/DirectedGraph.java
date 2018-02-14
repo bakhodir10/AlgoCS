@@ -19,10 +19,10 @@ public class DirectedGraph<V> {
     }
 
     // add vertex/node with an edge
-    public void addEdge(V vertex, V edge) {
+    public void addEdge(V from, V to) {
         Set<V> edges = new HashSet<>();
-        edges.add(edge);
-        this.addEdges(vertex, edges);
+        edges.add(to);
+        this.addEdges(from, edges);
     }
 
     // add vertex/node with set of edges

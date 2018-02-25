@@ -9,6 +9,7 @@ public class Factorial {
 
      /*
             How it works !
+        let's say n = 4
 
         4 -> else condition works, 4 * 3! and calls itself again
         3 -> else condition works, 3 * 2! and calls itself again

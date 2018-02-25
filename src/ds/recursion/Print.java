@@ -16,6 +16,7 @@ public class Print {
 
     /*
             How it works !
+        let's say n = 4
 
         5 -> else condition works, prints 5 and calls function itself with value 5 - 1 = 4
         4 -> else condition works, prints 4 and calls function itself with value 4 - 1 = 3

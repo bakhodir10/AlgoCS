@@ -16,7 +16,7 @@ public class PrintBinary {
 
     /*
             how it works
-         it is given n = 8;
+        let's say n = 8
 
         n = 8 else condition works
         n = 4 else condition works

@@ -24,8 +24,4 @@ public class Print {
         1 -> else condition works, prints 1 and calls function itself with value 1 - 1 = 0
         0 -> if condition works, just terminates loop.
      */
-
-    public static void main(String[] args) {
-        print(5);
-    }
 }

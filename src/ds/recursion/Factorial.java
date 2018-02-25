@@ -21,8 +21,4 @@ public class Factorial {
         4 * 3! = 4 * 6 = 24;
 
      */
-
-    public static void main(String[] args) {
-        System.out.println(factorial(4));
-    }
 }

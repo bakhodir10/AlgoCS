@@ -15,16 +15,12 @@ public class Palindrome {
             char first = s.charAt(0);
             char last = s.charAt(s.length() - 1);
             if (first == last) {
-                String rest = s.substring(1, s.length() - 2);
-                return isPalindrome2(rest);
+                String rest = s.substring(1, s.length() - 1);
+                boolean temp = isPalindrome2(rest);
+                return temp;
             } else {
                 return false;
             }
         }
-    }
-
-    public static void main(String[] args) {
-        System.out.println(isPalindrome1("aziza", 0, 4));
-        System.out.println(isPalindrome2("aziza"));
     }
 }

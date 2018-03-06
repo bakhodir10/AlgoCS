@@ -14,9 +14,4 @@ public class ReverseLines {
             System.out.println(s[index]);
         }
     }
-
-//    public static void main(String[] args) {
-//        String s[] = new String[]{"Roses are red", "Violets are blue", "All my base", "Are belong to"};
-//        reverseLines(s, 0);
-//    }
 }

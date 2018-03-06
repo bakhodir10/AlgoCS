@@ -1,4 +1,4 @@
-##Algorithms and Computer Science
+## Algorithms and Computer Science
 
 This repository is collection of **algorithms, data structures, their implementations,
 180+ solved questions on from popular coding challenge websites and
@@ -10,21 +10,21 @@ The main intent of creating the repository is
 to learn algorithm and helping to those who are new in coding. I will try do add new
 algorithm regularly.
 
-**[https://github.com/bakhodir10/AlgoCS/tree/master/src/ds](Data Structures)**
+**[Data Structures](https://github.com/bakhodir10/AlgoCS/tree/master/src/ds)**
 
 1.  **List**
-    1.  [https://github.com/bakhodir10/AlgoCS/blob/master/src/ds/arraylist/ArrayList.java](ArrayList)
-    2.  LinkedList[https://github.com/bakhodir10/AlgoCS/tree/master/src/ds/linkedlist]
+    1.  [ArrayList](https://github.com/bakhodir10/AlgoCS/blob/master/src/ds/arraylist/ArrayList.java)
+    2.  [LinkedList](https://github.com/bakhodir10/AlgoCS/tree/master/src/ds/linkedlist)
 
-2.  **Queue[https://github.com/bakhodir10/AlgoCS/tree/master/src/ds/queue]**
-    1.  PriorityQueue[https://github.com/bakhodir10/AlgoCS/blob/master/src/ds/queue/PriorityQueue.java]
-    2.  Queue by using array[https://github.com/bakhodir10/AlgoCS/blob/master/src/ds/queue/QueueArray.java]
-    3.  Queue by using linked list[https://github.com/bakhodir10/AlgoCS/blob/master/src/ds/queue/QueueLinkedList.java]
+2.  **[Queue](https://github.com/bakhodir10/AlgoCS/tree/master/src/ds/queue)**
+    1.  [PriorityQueue](https://github.com/bakhodir10/AlgoCS/blob/master/src/ds/queue/PriorityQueue.java)
+    2.  [Queue by using array](https://github.com/bakhodir10/AlgoCS/blob/master/src/ds/queue/QueueArray.java)
+    3.  [Queue by using linked list](https://github.com/bakhodir10/AlgoCS/blob/master/src/ds/queue/QueueLinkedList.java)
 
-3.  **Stack[https://github.com/bakhodir10/AlgoCS/tree/master/src/ds/stack]**
-    1.  Stack by using array[https://github.com/bakhodir10/AlgoCS/blob/master/src/ds/stack/StackArray.java]
-    2.  Stack by using linked list  
-    3.  Double stack[https://github.com/bakhodir10/AlgoCS/blob/master/src/ds/stack/StackDouble.java]
+3.  **[Stack](https://github.com/bakhodir10/AlgoCS/tree/master/src/ds/stack)**
+    1.  [Stack by using array](https://github.com/bakhodir10/AlgoCS/blob/master/src/ds/stack/StackArray.java)
+    2.  [Stack by using linked list](https://github.com/bakhodir10/AlgoCS/blob/master/src/ds/stack/StackLinkedList.java)  
+    3.  [Double stack](https://github.com/bakhodir10/AlgoCS/blob/master/src/ds/stack/StackDouble.java)
 
 4.  **Sorting[https://github.com/bakhodir10/AlgoCS/tree/master/src/ds/sorting]**
     1. O(N^2) Algorithms

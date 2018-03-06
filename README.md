@@ -1,4 +1,4 @@
-#Algorithms and Computer Science
+##Algorithms and Computer Science
 
 This repository is collection of **algorithms, data structures, their implementations,
 180+ solved questions on from popular coding challenge websites and
@@ -10,10 +10,10 @@ The main intent of creating the repository is
 to learn algorithm and helping to those who are new in coding. I will try do add new
 algorithm regularly.
 
-**Data Structures[https://github.com/bakhodir10/AlgoCS/tree/master/src/ds]**
+**[https://github.com/bakhodir10/AlgoCS/tree/master/src/ds](Data Structures)**
 
 1.  **List**
-    1.  ArrayList[https://github.com/bakhodir10/AlgoCS/blob/master/src/ds/arraylist/ArrayList.java]
+    1.  [https://github.com/bakhodir10/AlgoCS/blob/master/src/ds/arraylist/ArrayList.java](ArrayList)
     2.  LinkedList[https://github.com/bakhodir10/AlgoCS/tree/master/src/ds/linkedlist]
 
 2.  **Queue[https://github.com/bakhodir10/AlgoCS/tree/master/src/ds/queue]**

@@ -10,7 +10,7 @@ The main intent of creating the repository is
 to learn algorithms and helping to those who want to improve problem solving skill. I will try do add new
 algorithms regularly.
 
-## [Data Structures](https://github.com/bakhodir10/AlgoCS/tree/master/src/ds)**
+## [Data Structures](https://github.com/bakhodir10/AlgoCS/tree/master/src/ds)
 
 1.  **List**
     1.  [ArrayList](https://github.com/bakhodir10/AlgoCS/blob/master/src/ds/arraylist/ArrayList.java)

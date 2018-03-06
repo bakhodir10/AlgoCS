@@ -16,7 +16,7 @@ algorithms regularly.
     1.  [ArrayList](https://github.com/bakhodir10/AlgoCS/blob/master/src/ds/arraylist/ArrayList.java)
     2.  [LinkedList](https://github.com/bakhodir10/AlgoCS/tree/master/src/ds/linkedlist)
 
-2.  **[Queue](https://github.com/bakhodir10/AlgoCS/tree/master/src/ds/queue)**
+2.  **Queue**
     1.  [PriorityQueue](https://github.com/bakhodir10/AlgoCS/blob/master/src/ds/queue/PriorityQueue.java)
     2.  [Queue by using array](https://github.com/bakhodir10/AlgoCS/blob/master/src/ds/queue/QueueArray.java)
     3.  [Queue by using linked list](https://github.com/bakhodir10/AlgoCS/blob/master/src/ds/queue/QueueLinkedList.java)

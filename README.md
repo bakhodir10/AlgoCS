@@ -10,7 +10,7 @@ The main intent of creating the repository is
 to learn algorithms and helping to those who want to improve problem solving skill. I will try do add new
 algorithms regularly.
 
-## [Data Structures](https://github.com/bakhodir10/AlgoCS/tree/master/src/ds)
+## [Data Structures:](https://github.com/bakhodir10/AlgoCS/tree/master/src/ds)
 
 1.  **List**
     1.  [ArrayList](https://github.com/bakhodir10/AlgoCS/blob/master/src/ds/arraylist/ArrayList.java)
@@ -47,13 +47,11 @@ algorithms regularly.
     3. [Print Binary](https://github.com/bakhodir10/AlgoCS/blob/master/src/ds/recursion/PrintBinary.java)
 8.  **Tree**
     1. [Binary Search Tree(BST) implementation](https://github.com/bakhodir10/AlgoCS/blob/master/src/ds/tree/BST.java)
-    2. [BST with iterative ways](https://github.com/bakhodir10/AlgoCS/blob/master/src/ds/tree/BSTIterative.java)
+    2. [BST iteratation](https://github.com/bakhodir10/AlgoCS/blob/master/src/ds/tree/BSTIterative.java)
     3. [BST with duplicate elements](https://github.com/bakhodir10/AlgoCS/blob/master/src/ds/tree/BSTWithDuplicate.java)
     4. [Threaded Tree](https://github.com/bakhodir10/AlgoCS/blob/master/src/ds/tree/ThreadedTree.java)
     5. [BST iterative without recursion](https://github.com/bakhodir10/AlgoCS/blob/master/src/ds/tree/TraversalIterative.java)
-    6. [BST delete node](https://github.com/bakhodir10/AlgoCS/blob/master/src/ds/tree/DeleteNodeInBST.java)
-    7. [BST insert node](https://github.com/bakhodir10/AlgoCS/blob/master/src/ds/tree/InsertNodeInBST.java)
-    7. [Tries](https://github.com/bakhodir10/AlgoCS/blob/master/src/ds/tree/Tries.java)    
+    6. [Tries](https://github.com/bakhodir10/AlgoCS/blob/master/src/ds/tree/Tries.java)    
 9.  **Balanced Tree**
     1. [AVL Tree](https://github.com/bakhodir10/AlgoCS/blob/master/src/ds/balanced_tree/AVLTree.java)
     2. [Red Black Tree](https://github.com/bakhodir10/AlgoCS/blob/master/src/ds/balanced_tree/RedBlackTree.java)    

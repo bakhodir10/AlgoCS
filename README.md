@@ -40,6 +40,7 @@ algorithms regularly.
     2. Binary Search
     3. Interpolation Search
 6.  **HashTable**
+    1.  Hashtable implementation
 7.  **Recursion**
     1. [Palindrome](https://github.com/bakhodir10/AlgoCS/blob/master/src/ds/recursion/Palindrome.java)
     2. [Is Array Sorted](https://github.com/bakhodir10/AlgoCS/blob/master/src/ds/recursion/SortedArray.java)

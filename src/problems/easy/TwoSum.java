@@ -1,11 +1,20 @@
 package problems.easy;
 
-public class TwoSum {
+import java.util.HashMap;
+import java.util.Map;
 
-    public int[] twoSum(int[] nums, int target) {
+public class TwoSum {
+    public static int[] twoSum(int[] nums, int target) {
+        Map<Integer, Integer> numbers = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
-            for (int j = i + 1; j < nums.length; j++) {
-                if (nums[i] + nums[j] == target) return new int[]{i, j};
+            numbers.put(nums[i], i);
+        }
+
+        for (int i = 0; i < nums.length; i++) {
+            boolean exist = numbers.containsKey(target - nums[i]);
+            if (exist) {
+                int index = numbers.get(target - nums[i]);
+                if (i != index) return new int[]{i, index};
             }
         }
         return new int[]{-1, -1};

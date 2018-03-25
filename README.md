@@ -63,7 +63,8 @@ algorithms regularly.
         1. [Directed Graph](https://github.com/bakhodir10/AlgoCS/blob/master/src/ds/graph/adjacency_matrix/DirectedGraph.java)
     
 ## Problems
-### Array
+
+### Arrays
 #### [Questions](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/array/questions.txt)
 #### Answers
    1.   [Array Nesting](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/array/ArrayNesting_565.java)
@@ -87,8 +88,8 @@ algorithms regularly.
    7.   [Palindrome Number](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/math/PalindromeNumber_9.java)
    8.  [More....](https://github.com/bakhodir10/AlgoCS/tree/master/src/problems/math)
 
-### String
-#### [Question](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/string/questions.txt)
+### Strings
+#### [Questions](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/string/questions.txt)
 #### Answers
    1.   [Add Binary](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/string/AddBinary_67.java)
    2.   [Complex Number](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/string/ComplexNumber_537.java)
@@ -98,7 +99,6 @@ algorithms regularly.
    6.   [Roman to Integer](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/string/RomanToInteger_13.java)
    7.   [Valid Palindrome](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/string/ValidPalindrome_125.java) 
    8.   [More....](https://github.com/bakhodir10/AlgoCS/tree/master/src/problems/string)
-   
    
 ## Contribution
 

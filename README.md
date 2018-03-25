@@ -1,7 +1,7 @@
 # Algorithms and Computer Science ![travis build](https://img.shields.io/badge/language-Java%2FC%2B%2B-blue.svg) [![travis build](https://img.shields.io/packagist/l/doctrine/orm.svg)](https://github.com/bakhodir10/AlgoCS/blob/master/LICENSE) [![travis build](https://img.shields.io/badge/say-thanks-ff69b4.svg)](https://saythanks.io/to/bakhodir10)
 
 This repository is collection of **algorithms, data structures, their implementations,
-180+ solved questions on from popular coding challenge websites and
+200+ solved questions on from popular coding challenge websites and
 also Interview questions that many people are asked during the interview.**
 Algorithms are implemented in Java. I will try to add C++ versions in the future.
 If you would like to do that or in any other languages, feel free to pull request. 
@@ -61,13 +61,12 @@ algorithms regularly.
         2. [Un-directed Graph](https://github.com/bakhodir10/AlgoCS/blob/master/src/ds/graph/adjacency_list/UnDirectedGraph.java)
     2. **Adjacency Matrix**
         1. [Directed Graph](https://github.com/bakhodir10/AlgoCS/blob/master/src/ds/graph/adjacency_matrix/DirectedGraph.java)
+    
 ## Problems
-
-
-| #              | Tittle                        |   Solution      |       Difficulty   |     Tag      |
-| :--------------|:-----------------------------:|:---------------:|:------------------:|:------------:|
-| 1         |[Add Binary](https://leetcode.com/problems/add-binary/description/)|[Java](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/easy/AddBinary_67.java) [C++]() | Easy |     Math, String   |
-
+### Math(23 solved)
+#### [Questions]()
+#### Answers
+    1. [Array Partition I]()
 ## Contribution
 
 Oops ! Have you found a mistake ? Please, feel free to pull request !. Your work is really appreciated.

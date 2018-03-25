@@ -61,6 +61,13 @@ algorithms regularly.
         2. [Un-directed Graph](https://github.com/bakhodir10/AlgoCS/blob/master/src/ds/graph/adjacency_list/UnDirectedGraph.java)
     2. **Adjacency Matrix**
         1. [Directed Graph](https://github.com/bakhodir10/AlgoCS/blob/master/src/ds/graph/adjacency_matrix/DirectedGraph.java)
+## Problems
+
+
+| #     | Tittle        | Solution|
+| ------|:-------------:| -----:|
+| 1     |[67. Add Binary](https://leetcode.com/problems/add-binary/description/)|[Java](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/easy/AddBinary_67.java) |
+| 2     | centered      |   $12 |
 
 ## Contribution
 

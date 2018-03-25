@@ -62,11 +62,12 @@ algorithms regularly.
     2. **Adjacency Matrix**
         1. [Directed Graph](https://github.com/bakhodir10/AlgoCS/blob/master/src/ds/graph/adjacency_matrix/DirectedGraph.java)
     
-## Problems
-### Math(23 solved)
+## Solved problems on Leetcode
+### Math
 #### [Questions]()
 #### Answers
-    1. [Array Partition I]()
+   1.   [Array Partition I](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/easy/array/ArrayPartition_561.java)
+   
 ## Contribution
 
 Oops ! Have you found a mistake ? Please, feel free to pull request !. Your work is really appreciated.

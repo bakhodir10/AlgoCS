@@ -16,20 +16,8 @@ The pivot selection and partitioning steps can be done in several different ways
 Worst-case performance:	O(n2)
 Best-case performance:	O(n log n) (simple partition) or O(n) (three-way partition and equal keys)
 Average performance:	O(n log n)
-Worst-case space complexity:	O(n) auxiliary (naive). O(log n) auxiliary (Sedgewick 1978)
+Worst-case space complexity:	O(n) auxiliary (naive). O(log n)
  */
 public class QuickSort {
-    private int arr[];
-
-    public QuickSort(int[] arr) {
-        this.arr = arr;
-    }
-
-    public int[] sort() {
-        return arr;
-    }
-
-    private int getDivider(int a, int b) {
-        return (a + b) / 2;
-    }
+   
 }

@@ -63,6 +63,6 @@ algorithms regularly.
     2. **Adjacency Matrix**
         1. [Directed Graph](https://github.com/bakhodir10/AlgoCS/blob/master/src/ds/graph/adjacency_matrix/DirectedGraph.java)
         
-  ### Oh, Thanks!      
-Oh, Thanks!
+### Oh, Thanks!
+
 By the way... thank you! And if you'd like to [say thanks](https://saythanks.io/to/bakhodir10)... :)        

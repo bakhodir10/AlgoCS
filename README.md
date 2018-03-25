@@ -29,18 +29,19 @@ algorithms regularly.
         2. [Bubble Sort](https://github.com/bakhodir10/AlgoCS/blob/master/src/ds/sorting/BubbleSort.java)
         3. [Selection Sort](https://github.com/bakhodir10/AlgoCS/blob/master/src/ds/sorting/SelectionSort.java)
     2. O(N log N) Algorithms
-        1. Heap Sort
-        2. Quick Sort
-        3. Merge Sort
+        1. [Heap Sort](https://github.com/bakhodir10/AlgoCS/blob/master/src/ds/sorting/HeapSort.java)
+        2. [Quick Sort](https://github.com/bakhodir10/AlgoCS/blob/master/src/ds/sorting/QuickSort.java)
+        3. [Merge Sort](https://github.com/bakhodir10/AlgoCS/blob/master/src/ds/sorting/MergeSort.java)
     3. Sub O(N log N) Algorithms
-        1. Counting Sort
-        2. Bucket Sort
+        1. [Counting Sort](https://github.com/bakhodir10/AlgoCS/blob/master/src/ds/sorting/CountingSort.java)
+        2. [Bucket Sort](https://github.com/bakhodir10/AlgoCS/blob/master/src/ds/sorting/BucketSort.java)
+        3. [Radix Sort](https://github.com/bakhodir10/AlgoCS/blob/master/src/ds/sorting/RadixSort.java)
 5.  **Searching**
     1. Linear Search
     2. Binary Search
     3. Interpolation Search
 6.  **Hash Table**
-    1.  Hash table implementation
+    1.  [Hash table implementation](https://github.com/bakhodir10/AlgoCS/blob/master/src/ds/hashtable/HashTable.java)
 7.  **Recursion**
     1. [Palindrome](https://github.com/bakhodir10/AlgoCS/blob/master/src/ds/recursion/Palindrome.java)
     2. [Is Array Sorted](https://github.com/bakhodir10/AlgoCS/blob/master/src/ds/recursion/SortedArray.java)

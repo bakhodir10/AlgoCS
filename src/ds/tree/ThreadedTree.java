@@ -2,7 +2,7 @@ package ds.tree;
 
 /*
 A thread is a series of links that allow you to move through the nodes in a tree or
-network in a way other than by following normal branches or links. A threaded
+network in a way others than by following normal branches or links. A threaded
 tree is a tree that contains one or more threads.
  */
 

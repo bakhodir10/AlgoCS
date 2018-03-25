@@ -64,10 +64,10 @@ algorithms regularly.
 ## Problems
 
 
-| #     | Tittle        | Solution|
-| ------|:-------------:| -----:|
-| 1     |[67. Add Binary](https://leetcode.com/problems/add-binary/description/)|[Java](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/easy/AddBinary_67.java) |
-| 2     | centered      |   $12 |
+| #         | Tittle               |   Solution  |
+| ----------|:--------------------:| -----------:|
+| 1         |[67. Add Binary](https://leetcode.com/problems/add-binary/description/)|[Java](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/easy/AddBinary_67.java) |
+| 2         | centered             |   $12 |
 
 ## Contribution
 

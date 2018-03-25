@@ -66,7 +66,7 @@ algorithms regularly.
 
 ### Arrays
 #### [Questions](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/array/questions.txt)
-#### Answers
+#### Answers :
    1.   [Array Nesting](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/array/ArrayNesting_565.java)
    2.   [Array Partition](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/array/ArrayPartition_561.java)
    3.   [Bit Character](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/array/BitCharacter_717.java)
@@ -78,7 +78,7 @@ algorithms regularly.
 
 ### Math
 #### [Questions](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/math/questions.txt)
-#### Answers
+#### Answers :
    1.   [Add Strings](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/math/AddStrings_415.java)
    2.   [Add two numbers](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/math/AddTwoNumbers_2.java)
    3.   [Arranging coins](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/math/ArrangingCoins_441.java)
@@ -90,7 +90,7 @@ algorithms regularly.
 
 ### Strings
 #### [Questions](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/string/questions.txt)
-#### Answers
+#### Answers :
    1.   [Add Binary](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/string/AddBinary_67.java)
    2.   [Complex Number](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/string/ComplexNumber_537.java)
    3.   [Detect Capital](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/string/DetectCapital_520.java)

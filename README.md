@@ -62,11 +62,20 @@ algorithms regularly.
     2. **Adjacency Matrix**
         1. [Directed Graph](https://github.com/bakhodir10/AlgoCS/blob/master/src/ds/graph/adjacency_matrix/DirectedGraph.java)
     
-## Solved problems on Leetcode
-### Math
-#### [Questions]()
+## [Solved problems on Leetcode](https://github.com/bakhodir10/AlgoCS/tree/master/src/problems)
+### Array
+#### [Questions](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/array/questions.txt)
 #### Answers
-   1.   [Array Partition I](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/easy/array/ArrayPartition_561.java)
+   1.   [Array Nesting](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/array/ArrayNesting_565.java)
+   2.   [Array Partition](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/array/ArrayPartition_561.java)
+   3.   [Bit Character](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/array/BitCharacter_717.java)
+   4.   [Contains Duplicate](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/array/ConsDuplicate_217.java)
+   5.   [Degree of an array](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/array/DegreeArray_697.java)
+   6.   [Find All Numbers Disappeared in an Array](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/array/FindAllDisArr_448.java)
+   7.   [Largest Number At Least](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/array/LargestNumAtLeast_747.java)
+   8.   [Majority Element](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/array/MajorityEl_169.java)
+   9.   [Max Consecutive Ones](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/array/MaxConsecutiv_485.java)
+   10.  [Merge Sorted Array](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/array/MergeSortedArray_88.java)
    
 ## Contribution
 

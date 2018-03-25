@@ -1,4 +1,5 @@
 # Algorithms and Computer Science [![travis build](https://img.shields.io/packagist/l/doctrine/orm.svg)](https://github.com/bakhodir10/AlgoCS/blob/master/LICENSE)
+[![travis build](https://img.shields.io/badge/say-thanks-ff69b4.svg)](https://saythanks.io/to/bakhodir10)
 
 This repository is collection of **algorithms, data structures, their implementations,
 180+ solved questions on from popular coding challenge websites and

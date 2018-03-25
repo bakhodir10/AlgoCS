@@ -62,7 +62,7 @@ algorithms regularly.
     2. **Adjacency Matrix**
         1. [Directed Graph](https://github.com/bakhodir10/AlgoCS/blob/master/src/ds/graph/adjacency_matrix/DirectedGraph.java)
     
-## [Solved problems on Leetcode](https://github.com/bakhodir10/AlgoCS/tree/master/src/problems)
+## Problems
 ### Array
 #### [Questions](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/array/questions.txt)
 #### Answers
@@ -76,6 +76,7 @@ algorithms regularly.
    8.   [Majority Element](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/array/MajorityEl_169.java)
    9.   [Max Consecutive Ones](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/array/MaxConsecutiv_485.java)
    10.  [Merge Sorted Array](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/array/MergeSortedArray_88.java)
+   11.  [More.....](https://github.com/bakhodir10/AlgoCS/tree/master/src/problems/array)
    
 ## Contribution
 

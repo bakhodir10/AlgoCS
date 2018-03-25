@@ -62,7 +62,7 @@ algorithms regularly.
     2. **Adjacency Matrix**
         1. [Directed Graph](https://github.com/bakhodir10/AlgoCS/blob/master/src/ds/graph/adjacency_matrix/DirectedGraph.java)
 
-## Contribute
+## Contribution
 
 Oops ! Have you found a mistake ? Please, feel free to pull request !. Your work is really appreciated.
         

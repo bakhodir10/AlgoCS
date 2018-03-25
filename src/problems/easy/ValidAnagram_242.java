@@ -1,13 +1,26 @@
 package problems.easy;
 
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
+
 public class ValidAnagram_242 {
-    public static boolean isAnagram(String s, String t) {
-        StringBuilder a = new StringBuilder(s);
-        for (int i = 0; i < t.length(); i++) {
-            int index = a.indexOf(t.charAt(i) + "");
-            if (index != -1) a.delete(index, index + 1);
-            else return false;
+    public int[] intersection(int[] nums1, int[] nums2) {
+        Set<Integer> set1 = new HashSet<>();
+        Set<Integer> set2 = new HashSet<>();
+        for (int i = 0; i < nums1.length; i++) {
+            set1.add(nums1[i]);
         }
-        return a.length() == 0;
+        for (int i = 0; i < nums2.length; i++) {
+            boolean b = set1.contains(nums2[i]);
+            if (b) set2.add(nums2[i]);
+        }
+        int arr[] = new int[set2.size()];
+        Iterator<Integer> it = set2.iterator();
+        int i = 0;
+        while (it.hasNext()) {
+            arr[i++] = it.next();
+        }
+        return arr;
     }
 }

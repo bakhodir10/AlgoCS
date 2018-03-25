@@ -64,7 +64,7 @@ algorithms regularly.
 
 ## Contribute
 
-Oops! Have you found a mistake ? Please, feel free to pull request! Your work is really appreciated.
+Oops ! Have you found a mistake ? Please, feel free to pull request !. Your work is really appreciated.
         
 ## Oh, Thanks!
 

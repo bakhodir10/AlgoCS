@@ -9,7 +9,7 @@ If you would like to do that or in any other languages, feel free to pull reques
 The main intent of creating the repository is 
 to learn algorithms and helping to those who want to improve problem solving skill. I will try do add new
 algorithms regularly.
-[![travis build](https://img.shields.io/packagist/l/doctrine/orm.svg)]
+[![travis build](https://img.shields.io/packagist/l/doctrine/orm.svg)](https://github.com/bakhodir10/AlgoCS/blob/master/LICENSE)
 ## [Data Structures:](https://github.com/bakhodir10/AlgoCS/tree/master/src/ds)
 
 1.  **List**

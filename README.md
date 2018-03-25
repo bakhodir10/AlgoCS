@@ -64,9 +64,9 @@ algorithms regularly.
 ## Problems
 
 
-| #              | Tittle                        |   Solution      |       Difficulty   |
-| :--------------|:-----------------------------:|:---------------:|:------------------:|
-| 1         |[Add Binary](https://leetcode.com/problems/add-binary/description/)|[Java](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/easy/AddBinary_67.java) | Easy |
+| #              | Tittle                        |   Solution      |       Difficulty   |     Tag      |
+| :--------------|:-----------------------------:|:---------------:|:------------------:|:------------:|
+| 1         |[Add Binary](https://leetcode.com/problems/add-binary/description/)|[Java](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/easy/AddBinary_67.java) | Easy |     Math, String   |
 
 ## Contribution
 

@@ -73,10 +73,31 @@ algorithms regularly.
    5.   [Degree of an array](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/array/DegreeArray_697.java)
    6.   [Find All Numbers Disappeared in an Array](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/array/FindAllDisArr_448.java)
    7.   [Largest Number At Least](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/array/LargestNumAtLeast_747.java)
-   8.   [Majority Element](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/array/MajorityEl_169.java)
-   9.   [Max Consecutive Ones](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/array/MaxConsecutiv_485.java)
-   10.  [Merge Sorted Array](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/array/MergeSortedArray_88.java)
-   11.  [More.....](https://github.com/bakhodir10/AlgoCS/tree/master/src/problems/array)
+   8.  [More.....](https://github.com/bakhodir10/AlgoCS/tree/master/src/problems/array)
+
+### Math
+#### [Questions](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/math/questions.txt)
+#### Answers
+   1.   [Add Strings](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/math/AddStrings_415.java)
+   2.   [Add two numbers](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/math/AddTwoNumbers_2.java)
+   3.   [Arranging coins](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/math/ArrangingCoins_441.java)
+   4.   [Count Primes](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/math/CountPrimes_204.java)
+   5.   [Excel Column](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/math/ExcelColumn_168.java)
+   6.   [Minimum moves equal](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/math/MinimumMovesEqual_453.java)
+   7.   [Palindrome Number](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/math/PalindromeNumber_9.java)
+   8.  [More....](https://github.com/bakhodir10/AlgoCS/tree/master/src/problems/math)
+
+### String
+#### [Question](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/string/questions.txt)
+#### Answers
+   1.   [Add Binary](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/string/AddBinary_67.java)
+   2.   [Complex Number](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/string/ComplexNumber_537.java)
+   3.   [Detect Capital](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/string/DetectCapital_520.java)
+   4.   [Judge Circle](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/string/JudgeCircle_657.java)
+   5.   [Longest Common Prefix](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/string/LongestCommonPrefix_14.java)
+   6.   [Roman to Integer](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/string/RomanToInteger_13.java)
+   7.   [Valid Palindrome](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/string/ValidPalindrome_125.java) 
+   8.   [More....](https://github.com/bakhodir10/AlgoCS/tree/master/src/problems/string)
    
    
 ## Contribution

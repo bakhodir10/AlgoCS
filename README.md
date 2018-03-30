@@ -72,7 +72,7 @@ algorithms regularly.
 
 ### Topics
 
-### Arrays
+#### Arrays
 
    1.   [Array Nesting](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/array/ArrayNesting_565.java)
    2.   [Array Partition](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/array/ArrayPartition_561.java)
@@ -83,7 +83,7 @@ algorithms regularly.
    7.   [Largest Number At Least](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/array/LargestNumAtLeast_747.java)
    8.  [More.....](https://github.com/bakhodir10/AlgoCS/tree/master/src/problems/array)
 
-### LinkedList
+#### LinkedList
    1.   [Array Nesting](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/array/ArrayNesting_565.java)
    2.   [Array Partition](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/array/ArrayPartition_561.java)
    3.   [Bit Character](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/array/BitCharacter_717.java)
@@ -93,7 +93,7 @@ algorithms regularly.
    7.   [Largest Number At Least](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/array/LargestNumAtLeast_747.java)
    8.  [More.....](https://github.com/bakhodir10/AlgoCS/tree/master/src/problems/array)
 
-### Math
+#### Math
 
    1.   [Add Strings](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/math/AddStrings_415.java)
    2.   [Add two numbers](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/math/AddTwoNumbers_2.java)
@@ -104,7 +104,7 @@ algorithms regularly.
    7.   [Palindrome Number](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/math/PalindromeNumber_9.java)
    8.  [More....](https://github.com/bakhodir10/AlgoCS/tree/master/src/problems/math)
 
-### Strings
+#### Strings
 
    1.   [Add Binary](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/string/AddBinary_67.java)
    2.   [Complex Number](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/string/ComplexNumber_537.java)
@@ -115,7 +115,7 @@ algorithms regularly.
    7.   [Valid Palindrome](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/string/ValidPalindrome_125.java) 
    8.   [More....](https://github.com/bakhodir10/AlgoCS/tree/master/src/problems/string)
 
-### Bit Manipulation
+#### Bit Manipulation
 
    1.   [Binary Number with Alternating Bits]()
    2.   [Hamming Distance](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/string/ComplexNumber_537.java)
@@ -126,7 +126,7 @@ algorithms regularly.
    7.   [Single element](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/string/ValidPalindrome_125.java) 
    8.   [More....](https://github.com/bakhodir10/AlgoCS/tree/master/src/problems/string)
 
-### Tree
+#### Tree
 
    1.   [Binary Number with Alternating Bits]()
    2.   [Hamming Distance](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/string/ComplexNumber_537.java)

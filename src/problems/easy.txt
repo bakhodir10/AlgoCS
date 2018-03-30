@@ -1,0 +1,90 @@
+771. Jewels and Stones
+https://leetcode.com/problems/jewels-and-stones/description/
+804. Unique Morse Code Words
+https://leetcode.com/problems/unique-morse-code-words/description/
+461. Hamming Distance
+https://leetcode.com/problems/hamming-distance/
+657. Judge Route Circle
+https://leetcode.com/problems/judge-route-circle/
+806. Number of Lines To Write String
+https://leetcode.com/problems/number-of-lines-to-write-string/description/
+728. Self Dividing Numbers
+https://leetcode.com/problems/self-dividing-numbers/description/
+561. Array Partition I
+https://leetcode.com/problems/array-partition-i/description/
+344. Reverse String
+https://leetcode.com/problems/reverse-string/description/
+557. Reverse Words in a String III
+https://leetcode.com/problems/reverse-words-in-a-string-iii/description/
+500. Keyboard Row
+https://leetcode.com/problems/keyboard-row/
+412. Fizz Buzz
+https://leetcode.com/problems/fizz-buzz/description/
+575. Distribute Candies
+https://leetcode.com/problems/distribute-candies/description/
+566. Reshape the Matrix
+https://leetcode.com/problems/reshape-the-matrix/
+637. Average of Levels in Binary Tree
+https://leetcode.com/problems/average-of-levels-in-binary-tree/
+693. Binary Number with Alternating Bits
+https://leetcode.com/problems/binary-number-with-alternating-bits/description/
+136. Single Number
+https://leetcode.com/problems/single-number/description/
+292. Nim Game
+https://leetcode.com/problems/nim-game/description/
+485. Max Consecutive Ones
+https://leetcode.com/problems/max-consecutive-ones/
+784. Letter Case Permutation
+https://leetcode.com/problems/letter-case-permutation/
+520. Detect Capital
+https://leetcode.com/problems/detect-capital/
+690. Employee Importance
+https://leetcode.com/problems/employee-importance/description/
+283. Move Zeroes
+https://leetcode.com/problems/move-zeroes/
+389. Find the Difference
+https://leetcode.com/problems/find-the-difference/
+453. Minimum Moves to Equal Array Elements
+https://leetcode.com/problems/minimum-moves-to-equal-array-elements/
+13. Roman to Integer
+https://leetcode.com/problems/roman-to-integer/
+169. Majority Element
+https://leetcode.com/problems/majority-element/
+100. Same Tree
+https://leetcode.com/problems/same-tree/
+242. Valid Anagram
+https://leetcode.com/problems/valid-anagram/description/
+530. Minimum Absolute Difference in BST
+https://leetcode.com/problems/minimum-absolute-difference-in-bst/description/
+167. Two Sum II - Input array is sorted
+https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/description/
+237. Delete Node in a Linked List
+https://leetcode.com/problems/delete-node-in-a-linked-list/description/
+217. Contains Duplicate
+https://leetcode.com/problems/contains-duplicate/description/
+506. Relative Ranks
+https://leetcode.com/problems/relative-ranks/description/
+206. Reverse Linked List
+https://leetcode.com/problems/reverse-linked-list/description/
+697. Degree of an Array
+https://leetcode.com/problems/degree-of-an-array/description/
+268. Missing Number
+https://leetcode.com/problems/missing-number/description/
+744. Find Smallest Letter Greater Than Target
+https://leetcode.com/problems/find-smallest-letter-greater-than-target/description/
+504. Base 7
+https://leetcode.com/problems/base-7/description/
+107. Binary Tree Level Order Traversal II
+https://leetcode.com/problems/binary-tree-level-order-traversal-ii/description/
+747. Largest Number At Least Twice of Others
+https://leetcode.com/problems/largest-number-at-least-twice-of-others/description/
+21. Merge Two Sorted Lists
+https://leetcode.com/problems/merge-two-sorted-lists/description/
+415. Add Strings
+https://leetcode.com/problems/add-strings/description/
+27. Remove Element
+https://leetcode.com/problems/remove-element/description/
+231. Power of Two
+https://leetcode.com/problems/power-of-two/description/
+191. Number of 1 Bits
+https://leetcode.com/problems/number-of-1-bits/description/

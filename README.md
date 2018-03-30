@@ -74,57 +74,52 @@ algorithms regularly.
 
 #### Arrays
 
-   1.   [Array Nesting](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/array/ArrayNesting_565.java)
-   2.   [Array Partition](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/array/ArrayPartition_561.java)
-   3.   [Bit Character](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/array/BitCharacter_717.java)
-   4.   [Contains Duplicate](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/array/ConsDuplicate_217.java)
-   5.   [Degree of an array](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/array/DegreeArray_697.java)
-   6.   [Find All Numbers Disappeared in an Array](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/array/FindAllDisArr_448.java)
-   7.   [Largest Number At Least](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/array/LargestNumAtLeast_747.java)
-   8.  [More.....](https://github.com/bakhodir10/AlgoCS/tree/master/src/problems/array)
-
+   1.   [Array Nesting](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/medium/ArrayNesting_565.java)
+   2.   [Array Partition](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/easy/ArrayPartition_561.java)
+   3.   [Bit Character](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/easy/BitCharacter_717.java)
+   4.   [Contains Duplicate](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/easy/ConsDuplicate_217.java)
+   5.   [Degree of an array](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/easy/DegreeArray_697.java)
+   6.   [Find All Numbers Disappeared in an Array](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/easy/FindAllDisArr_448.java)
+   7.   [Largest Number At Least](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/easy/LargestNumAtLeast_747.java)
+  
 #### LinkedList
-   1.   [Array Nesting](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/array/ArrayNesting_565.java)
-   2.   [Array Partition](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/array/ArrayPartition_561.java)
-   3.   [Bit Character](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/array/BitCharacter_717.java)
-   4.   [Contains Duplicate](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/array/ConsDuplicate_217.java)
-   5.   [Degree of an array](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/array/DegreeArray_697.java)
-   6.   [Find All Numbers Disappeared in an Array](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/array/FindAllDisArr_448.java)
-   7.   [Largest Number At Least](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/array/LargestNumAtLeast_747.java)
-   8.  [More.....](https://github.com/bakhodir10/AlgoCS/tree/master/src/problems/array)
+   1.   [Delete Node in a Linked List](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/easy/DeleteNode_237.java)
+   2.   [Reverse LinkedList](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/easy/ReverseNodes_206.java)
+   3.   [Remove Duplicates from Sorted List](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/easy/RemoveDuplicate_83.java)
+   4.   [Swap Nodes in Pairs](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/medium/SwapNodesPairs_24.java)
+   5.   [Linked List Cycle](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/easy/LinkedCycle_141.java)
+   6.   [Remove Nth Node From End of List](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/medium/RemoveNthNode_19.java)
+   7.   [Insertion Sort List](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/medium/InsertionSort_147.java)
 
 #### Math
 
-   1.   [Add Strings](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/math/AddStrings_415.java)
-   2.   [Add two numbers](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/math/AddTwoNumbers_2.java)
-   3.   [Arranging coins](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/math/ArrangingCoins_441.java)
-   4.   [Count Primes](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/math/CountPrimes_204.java)
-   5.   [Excel Column](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/math/ExcelColumn_168.java)
-   6.   [Minimum moves equal](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/math/MinimumMovesEqual_453.java)
-   7.   [Palindrome Number](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/math/PalindromeNumber_9.java)
-   8.  [More....](https://github.com/bakhodir10/AlgoCS/tree/master/src/problems/math)
+   1.   [Add Strings](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/easy/AddStrings_415.java)
+   2.   [Add two numbers](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/medium/AddTwoNumbers_2.java)
+   3.   [Arranging coins](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/easy/ArrangingCoins_441.java)
+   4.   [Count Primes](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/easy/CountPrimes_204.java)
+   5.   [Excel Column](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/easy/ExcelColumn_168.java)
+   6.   [Minimum moves equal](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/easy/MinimumMovesEqual_453.java)
+   7.   [Palindrome Number](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/easy/PalindromeNumber_9.java)
 
 #### Strings
 
-   1.   [Add Binary](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/string/AddBinary_67.java)
-   2.   [Complex Number](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/string/ComplexNumber_537.java)
-   3.   [Detect Capital](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/string/DetectCapital_520.java)
-   4.   [Judge Circle](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/string/JudgeCircle_657.java)
-   5.   [Longest Common Prefix](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/string/LongestCommonPrefix_14.java)
-   6.   [Roman to Integer](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/string/RomanToInteger_13.java)
-   7.   [Valid Palindrome](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/string/ValidPalindrome_125.java) 
-   8.   [More....](https://github.com/bakhodir10/AlgoCS/tree/master/src/problems/string)
+   1.   [Binary Number with Alternating Bits](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/easy/BinNumBits_693.java)
+   2.   [Hamming Distance](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/easy/ComplexNumber_537.java)
+   3.   [Letter Case](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/easy/DetectCapital_520.java)
+   4.   [Number of one bits](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/easy/JudgeCircle_657.java)
+   5.   [Power of four](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/easy/LongestCommonPrefix_14.java)
+   6.   [Power of two](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/easy/RomanToInteger_13.java)
+   7.   [Single element](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/string/ValidPalindrome_125.java) 
 
 #### Bit Manipulation
 
-   1.   [Binary Number with Alternating Bits]()
-   2.   [Hamming Distance](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/string/ComplexNumber_537.java)
-   3.   [Letter Case](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/string/DetectCapital_520.java)
-   4.   [Number of one bits](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/string/JudgeCircle_657.java)
-   5.   [Power of four](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/string/LongestCommonPrefix_14.java)
-   6.   [Power of two](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/string/RomanToInteger_13.java)
+   1.   [Binary Number with Alternating Bits](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/easy/BinNumBits_693.java)
+   2.   [Hamming Distance](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/easy/ComplexNumber_537.java)
+   3.   [Letter Case](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/easy/DetectCapital_520.java)
+   4.   [Number of one bits](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/easy/JudgeCircle_657.java)
+   5.   [Power of four](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/easy/LongestCommonPrefix_14.java)
+   6.   [Power of two](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/easy/RomanToInteger_13.java)
    7.   [Single element](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/string/ValidPalindrome_125.java) 
-   8.   [More....](https://github.com/bakhodir10/AlgoCS/tree/master/src/problems/string)
 
 #### Tree
 
@@ -135,7 +130,6 @@ algorithms regularly.
    5.   [Power of four](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/string/LongestCommonPrefix_14.java)
    6.   [Power of two](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/string/RomanToInteger_13.java)
    7.   [Single element](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/string/ValidPalindrome_125.java) 
-   8.   [More....](https://github.com/bakhodir10/AlgoCS/tree/master/src/problems/string)
    
 ## Contribution
 

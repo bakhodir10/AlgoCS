@@ -103,13 +103,13 @@ algorithms regularly.
 
 #### Strings
 
-   1.   [Binary Number with Alternating Bits](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/easy/BinNumBits_693.java)
-   2.   [Hamming Distance](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/easy/ComplexNumber_537.java)
-   3.   [Letter Case](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/easy/DetectCapital_520.java)
-   4.   [Number of one bits](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/easy/JudgeCircle_657.java)
-   5.   [Power of four](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/easy/LongestCommonPrefix_14.java)
-   6.   [Power of two](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/easy/RomanToInteger_13.java)
-   7.   [Single element](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/string/ValidPalindrome_125.java) 
+   1.   [Add Binary](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/easy/AddBinary_67.java)
+   2.   [Complex Number](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/easy/ComplexNumber_537.java)
+   3.   [Detect Capital](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/easy/DetectCapital_520.java)
+   4.   [Judge Circle](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/easy/JudgeCircle_657.java)
+   5.   [Longest Common Prefix](https://github.com/bakhodir10/AlgoCS/blob/master/src/easy/easy/LongestCommonPrefix_14.java)
+   6.   [Roman to Integer](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/easy/RomanToInteger_13.java)
+   7.   [Valid Palindrome](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/easy/ValidPalindrome_125.java) 
 
 #### Bit Manipulation
 
@@ -123,13 +123,13 @@ algorithms regularly.
 
 #### Tree
 
-   1.   [Binary Number with Alternating Bits]()
-   2.   [Hamming Distance](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/string/ComplexNumber_537.java)
-   3.   [Letter Case](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/string/DetectCapital_520.java)
-   4.   [Number of one bits](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/string/JudgeCircle_657.java)
-   5.   [Power of four](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/string/LongestCommonPrefix_14.java)
-   6.   [Power of two](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/string/RomanToInteger_13.java)
-   7.   [Single element](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/string/ValidPalindrome_125.java) 
+   1.   [Binary Tree Zigzag Level Order Traversal](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/medium/BinTreeZigzagLevel_103.java)
+   2.   [Delete Node in a BST](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/medium/DeleteNodeInBST_450.java)
+   3.   [Binary Tree Right Side View](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/medium/BinTreeRightSide_199.java)
+   4.   [Binary Tree Level Order Traversal](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/medium/BinTreeLevelOrder_102.java)
+   5.   [Binary Tree Preorder Traversal](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/medium/BinTreePreorder_144.java)
+   6.   [Find Largest Value in Each Tree Row](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/medium/LargeValEachRow_515.java)
+   7.   [Find Bottom Left Tree Value](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/medium/FindBotLeftTreeVal_513.java) 
    
 ## Contribution
 

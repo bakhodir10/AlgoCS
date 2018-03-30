@@ -64,7 +64,8 @@ algorithms regularly.
     
 ## Problems
 
-Problems are divided into three categories.
+**Problems are divided into three categories.**
+
 1. Easy [Questions](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/easy.txt) and [Solutions](https://github.com/bakhodir10/AlgoCS/tree/master/src/problems/easy)
 2. Medium [Questions](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/medium.txt) and [Solutions](https://github.com/bakhodir10/AlgoCS/tree/master/src/problems/medium)
 3. Hard [Questions](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/hard.txt) and [Solutions](https://github.com/bakhodir10/AlgoCS/tree/master/src/problems/hard)  

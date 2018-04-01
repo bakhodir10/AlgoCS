@@ -1,4 +1,4 @@
-package contest.leetcode.contest78;
+package contest.leetcode.contest77;
 
 public class NumberOfLines_806 {
     public static int[] numberOfLines(int[] widths, String s) {

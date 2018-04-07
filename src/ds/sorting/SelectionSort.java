@@ -28,11 +28,11 @@ public class SelectionSort {
                     min = arr[j];
                     k = j;
                 }
-                int temp = arr[i];
-                arr[i] = arr[k];
-                arr[k] = temp;
                 j++;
             }
+            int temp = arr[i];
+            arr[i] = arr[k];
+            arr[k] = temp;
             i++;
         }
         return arr;

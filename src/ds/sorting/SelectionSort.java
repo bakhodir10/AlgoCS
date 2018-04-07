@@ -1,7 +1,5 @@
 package ds.sorting;
 
-import java.util.Arrays;
-
 /*
 The algorithm divides the input list into two parts: the sublist of items already sorted, remaining
 which is built up from left to right at the front (left) of the list, and the sublist of items to be

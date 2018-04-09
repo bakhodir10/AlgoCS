@@ -1,6 +1,6 @@
 package problems.easy;
 
-public class ValidPalindrome_125 {
+public class ValidPalin_125 {
     public static boolean isPalindrome(String s) {
         StringBuilder b = new StringBuilder();
         s = s.toLowerCase();

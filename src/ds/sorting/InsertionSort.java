@@ -13,14 +13,16 @@ Worst-case space complexity:	О(n) total, O(1) auxiliary
  */
 public class InsertionSort {
     public static int[] sort(int arr[]) {
-        for (int i = 0; i < arr.length; i++) {
+        int i = 0;
+        while (i < arr.length) {
             int j = i - 1;
             while (j > 0 && arr[j] < arr[j - 1]) {
-                int a = arr[j];
+                int e = arr[j];
                 arr[j] = arr[j - 1];
-                arr[j - 1] = a;
+                arr[j - 1] = e;
                 j--;
             }
+            i++;
         }
         return arr;
     }

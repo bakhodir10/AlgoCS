@@ -1,20 +1,25 @@
-package algo;
+package problems.easy;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @SuppressWarnings("Duplicates")
-public class RabinKarp {
+public class FindAllAnagrams_438 {
 
-    public static boolean rabinKarp(String word, String sub) {
+    public static List<Integer> findAnagrams(String word, String sub) {
 
-        if (word.isEmpty()) return false;
+        List<Integer> ans = new ArrayList<>();
+
+        if (word.isEmpty()) return ans;
 
         int hash = hashCode(word.charAt(0)), hashSub = hashCode(sub);
         int lenSub = sub.length(), left = 0;
 
-        if (hash == hashSub) return true;
+        if (hash == hashSub) ans.add(left);
 
         for (int i = 1; i < word.length(); i++) {
 
-            if (hash == hashSub && isAnagram(word.substring(left, i + 1), sub)) return true;
+            if (hash == hashSub && isAnagram(word.substring(left, i + 1), sub)) ans.add(left);
 
             char newChar = word.charAt(i);
             char oldChar = word.charAt(left);
@@ -24,9 +29,9 @@ public class RabinKarp {
                 hash = changeHash(hash, oldChar, newChar);
                 left++;
             }
-            if (hash == hashSub && isAnagram(word.substring(left, i + 1), sub)) return true;
+            if (hash == hashSub && isAnagram(word.substring(left, i + 1), sub)) ans.add(left);
         }
-        return false;
+        return ans;
     }
 
     private static int changeHash(int hash, char oldChar, char newChar) {

@@ -1,5 +1,6 @@
 package problems.easy;
 
+@SuppressWarnings("Duplicates")
 public class MaximumSubarray_53 {
 
     // approach 1. Time complexity is O(n^2)

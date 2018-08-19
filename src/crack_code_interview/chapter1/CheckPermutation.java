@@ -27,8 +27,8 @@ public class CheckPermutation {
     public boolean checkPermutation2(String s1, String s2) {
         int count[] = new int[256];
 
-        for (char c : s1.toCharArray()) count[(int) c]++;
-        for (char c : s2.toCharArray()) count[(int) c]--;
+        for (char c : s1.toCharArray()) count[c]++;
+        for (char c : s2.toCharArray()) count[c]--;
 
         for (int c : count) {
             if (c != 0) return false;

@@ -7,8 +7,17 @@ package crack_code_interview.chapter1;
  */
 
 public class PalindromePermutation {
-    // Time complexity: O(2^n). Space complexity: O(n)
-    public boolean palindromePermutation(String s) {
-        return false;
+
+    // Time complexity: O(n). Space complexity: O(1)
+    public static boolean palindromePermutation(String s) {
+
+        int sum = 0;
+        s = s.toLowerCase();
+        int counts[] = new int[256];
+
+        for (char c : s.toCharArray()) counts[c]++;
+        for (int i : counts) sum += i % 2;
+
+        return sum <= 1;
     }
 }

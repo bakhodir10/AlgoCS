@@ -20,9 +20,9 @@ public class IsUnique {
         return true;
     }
 
-    // approach 2. Time complexity: O(n). Space complexity: O(n)
+    // approach 2. Time complexity: O(n). Space complexity: O(1)
     public boolean isUnique2(String s) {
-        Set<Character> counts = new HashSet<>();
+        Set<Character> counts = new HashSet<>(256);
         for (char c : s.toCharArray()) {
             if (counts.contains(c)) return false;
             counts.add(c);

@@ -1,4 +1,4 @@
-package crack_code_interview;
+package crack_code_interview.intro;
 
 public class ApowerOfB {
     

@@ -6,8 +6,6 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class Permutations_46 {
-    public static void main(String[] args) {
-    }
 
     public static List<List<Integer>> permute(int nums[]) {
         return permuteHelper(nums, 0, new ArrayList<>());

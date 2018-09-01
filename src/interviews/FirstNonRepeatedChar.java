@@ -6,11 +6,10 @@ public class FirstNonRepeatedChar {
     public static char firstNonRepeatedChar(String s) {
         if (s == null) return ' ';
         int count[] = new int[255];
-        char characters[] = s.toCharArray();
 
-        for (char c : characters) count[c]++;
+        for (char c : s.toCharArray()) count[c]++;
 
-        for (char c : characters) {
+        for (char c : s.toCharArray()) {
             if (count[c] == 1) return c;
         }
         return ' ';

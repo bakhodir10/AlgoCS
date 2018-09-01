@@ -10,9 +10,6 @@ package interviews;
 import java.util.Arrays;
 
 public class DeleteDupsArray {
-    public static void main(String[] args) {
-        System.out.println(Arrays.toString(deleteDups(new int[]{2, 2, 5, 2, 4, 6, 2, 7, 2})));
-    }
 
     // Approach 1. Time Complexity: O(n^2). Space complexity: O(1)
     public static int[] deleteDups(int nums[]) {

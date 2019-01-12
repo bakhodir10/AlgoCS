@@ -5,6 +5,12 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
+/*
+Consider an array of numeric strings where each string is a positive number with anywhere from  to  digits.
+Sort the array's elements in non-decreasing, or ascending order of their integer values and print each element
+of the sorted array on a new line.
+ */
+
 // todo not finished
 @SuppressWarnings("Duplicates")
 public class BigSorting {

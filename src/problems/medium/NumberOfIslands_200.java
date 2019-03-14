@@ -1,5 +1,9 @@
 package problems.medium;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
+// todo not done
 public class NumberOfIslands_200 {
 
     public static void main(String[] args) {
@@ -11,24 +15,18 @@ public class NumberOfIslands_200 {
         numIslands(c);
     }
 
-    private static boolean[] visited;
+    public static int numIslands(char[][] c) {
+        boolean[][] visited = new boolean[c.length][c[0].length];
+        int i = 0, j = 0, count = 0;
 
-    public static int numIslands(char[][] grid) {
-        int counter = 0;
-        visited = new boolean[grid.length];
-        dfs(grid, 0);
-        return counter;
-    }
+        while (i < c.length && j < c[0].length && !visited[i][j]) {
 
-    private static int dfs(char grid[][], int i) {
-
-        visited[i] = true;
-        for (int j = 0; j < 20; j++) {
-            if (!visited[i]) {
-                System.out.println(grid[i][j]);
-                dfs(grid, j);
-            }
+//            if ()
+            i++;
+            j++;
         }
+        Queue<Integer> q = new LinkedList<>();
+//        q.add();
         return 0;
     }
 }

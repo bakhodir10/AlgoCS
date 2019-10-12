@@ -74,7 +74,7 @@ class WordSearch_79 {
     }
 }
 /*
-[["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]]
+[["A","Solution","C","E"],["S","F","C","S"],["A","D","E","E"]]
 "SEE"
 true
  */

@@ -1,32 +1,31 @@
 package problems.medium;
 
-import java.util.LinkedList;
-import java.util.Queue;
-
-// todo not done
 public class NumberOfIslands_200 {
 
-    public static void main(String[] args) {
-        char c[][] = new char[4][5];
-        c[0] = "11110".toCharArray();
-        c[1] = "11010".toCharArray();
-        c[2] = "11000".toCharArray();
-        c[3] = "00000".toCharArray();
-        numIslands(c);
+    public int numIslands(char[][] grid) {
+        int count = 0;
+
+        for (int i = 0; i < grid.length; i++) {
+            for (int j = 0; j < grid[i].length; j++) {
+                if (grid[i][j] == '1') {
+                    dfs(grid, i, j);
+                    count++;
+                }
+            }
+        }
+        return count;
     }
 
-    public static int numIslands(char[][] c) {
-        boolean[][] visited = new boolean[c.length][c[0].length];
-        int i = 0, j = 0, count = 0;
-
-        while (i < c.length && j < c[0].length && !visited[i][j]) {
-
-//            if ()
-            i++;
-            j++;
+    private void dfs(char[][] grid, int i, int j) {
+        if (i < 0 || i > grid.length - 1 || j < 0 || j > grid[i].length - 1 || grid[i][j] != '1') {
+            return;
         }
-        Queue<Integer> q = new LinkedList<>();
-//        q.add();
-        return 0;
+
+        grid[i][j] = '-';
+
+        dfs(grid, i + 1, j);
+        dfs(grid, i - 1, j);
+        dfs(grid, i, j + 1);
+        dfs(grid, i, j - 1);
     }
 }

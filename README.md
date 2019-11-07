@@ -67,7 +67,7 @@ algorithms regularly.
     
 ## Problems
 
-**Problems are divided into three categories.**
+**Problems are divided into three categories. Most of the solved questions here from leetcode. Please visit the website [leetcode.com](https://leetcode.com) to read the questions**
 
 1. Easy [Questions](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/easy.txt) and [Solutions](https://github.com/bakhodir10/AlgoCS/tree/master/src/problems/easy)
 2. Medium [Questions](https://github.com/bakhodir10/AlgoCS/blob/master/src/problems/medium.txt) and [Solutions](https://github.com/bakhodir10/AlgoCS/tree/master/src/problems/medium)

@@ -1,7 +1,7 @@
 # Algorithms and Computer Science ![travis build](https://img.shields.io/badge/language-Java%2FC%2B%2B-blue.svg) [![travis build](https://img.shields.io/packagist/l/doctrine/orm.svg)](https://github.com/bakhodir10/AlgoCS/blob/master/LICENSE) [![travis build](https://img.shields.io/badge/say-thanks-ff69b4.svg)](https://saythanks.io/to/bakhodir10)
 
 This repository is collection of **algorithms, data structures, their implementations,
-200+ solved questions on from popular coding challenge websites and
+350+ solved questions on from popular coding challenge websites such as leetcode.com, codeforces.com, hackerrank.com, geeksforgeeks.com codechef.com, topcoder.com, acm.timus.ru and spoj.com
 also Interview questions that many people are asked during the interview.**
 Algorithms are implemented in Java. I will try to add C++ versions in the future.
 If you would like to do that or in any other languages, feel free to pull request. 

@@ -14,13 +14,12 @@ public class BaseballGame_682 {
         Stack<String> st = new Stack<>();
         st.push(ops[0]);
         int couldPoint = 0;
-        for (int i = 0; i < ops.length; i++) {
-            String s = ops[i];
+        for (String s : ops) {
             if (s.charAt(0) == '+') {
-                sum = Integer.valueOf(st.peek()) + couldPoint + sum;
+                sum = Integer.parseInt(st.peek()) + couldPoint + sum;
             } else if (s.charAt(0) == 'D') {
-                sum = Integer.valueOf(st.peek()) * 2 + sum;
-                couldPoint = Integer.valueOf(st.peek());
+                sum = Integer.parseInt(st.peek()) * 2 + sum;
+                couldPoint = Integer.parseInt(st.peek());
             } else if (s.charAt(0) == 'C') {
                 sum -= Integer.parseInt(st.pop());
             } else {

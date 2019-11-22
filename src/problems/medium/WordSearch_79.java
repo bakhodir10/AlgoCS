@@ -1,9 +1,5 @@
 package problems.medium;
 
-/*
- This question took me a year to solve. I am glad, finally I solved it :-)
-*/
-
 class WordSearch_79 {
     public boolean exist(char[][] board, String word) {
         boolean[][] visited = new boolean[board.length][board[0].length];

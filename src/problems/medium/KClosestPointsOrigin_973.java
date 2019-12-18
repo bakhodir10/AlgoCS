@@ -1,29 +1,33 @@
 package problems.medium;
 
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.PriorityQueue;
 
 public class KClosestPointsOrigin_973 {
 
     public int[][] kClosest(int[][] points, int k) {
 
-        Set<Pair> pairsInOrder = new TreeSet<>();
-        for (int[] point : points) {
-            pairsInOrder.add(new Pair(point[0], point[1]));
-        }
-
+        PriorityQueue<Pair> pQ = new PriorityQueue<>();
         int[][] res = new int[k][2];
-        int i = 0;
 
-        for (Pair p : pairsInOrder) {
-            if (k > i) res[i++] = new int[]{p.x, p.y};
-            else break;
+        for (int[] point : points) {
+            Pair pair = new Pair(point[0], point[1]);
+
+            if (pQ.size() == k) {
+                if (pQ.peek() != null && pQ.peek().compareTo(pair) < 0) {
+                    pQ.poll();
+                    pQ.add(pair);
+                }
+            } else pQ.add(pair);
         }
-
+        int i = 0;
+        while (!pQ.isEmpty()) {
+            Pair p = pQ.poll();
+            res[i++] = new int[]{p.x, p.y};
+        }
         return res;
     }
 
-    class Pair implements Comparable<Pair> {
+    private static class Pair implements Comparable<Pair> {
         int x;
         int y;
 
@@ -34,7 +38,7 @@ public class KClosestPointsOrigin_973 {
 
         @Override
         public int compareTo(Pair o) {
-            return Math.sqrt(this.x * this.x + this.y * this.y) >= Math.sqrt(o.x * o.x + o.y * o.y) ? 1 : -1;
+            return Math.sqrt(o.x * o.x + o.y * o.y) >= Math.sqrt(this.x * this.x + this.y * this.y) ? 1 : -1;
         }
     }
 }

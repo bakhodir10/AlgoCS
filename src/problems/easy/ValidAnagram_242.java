@@ -1,13 +1,14 @@
 package problems.easy;
 
 public class ValidAnagram_242 {
-    public static boolean isAnagram(String s, String t) {
-        StringBuilder a = new StringBuilder(s);
-        for (int i = 0; i < t.length(); i++) {
-            int index = a.indexOf(t.charAt(i) + "");
-            if (index != -1) a.delete(index, index + 1);
-            else return false;
+
+    public boolean isAnagram(String s, String t) {
+        int[] dic = new int[26];
+        for (char c : s.toCharArray()) dic[c - 'a']++;
+        for (char c : t.toCharArray()) dic[c - 'a']--;
+        for (int i : dic) {
+            if (i != 0) return false;
         }
-        return a.length() == 0;
+        return true;
     }
 }

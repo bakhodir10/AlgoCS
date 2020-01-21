@@ -4,12 +4,9 @@ public class MissingNumber_268 {
 
     // approach 1
     public static int missingNumber1(int[] nums) {
-        int sum1 = 0;
-        for (int i = 0; i < nums.length; i++) {
-            sum1 += nums[i];
-        }
-        int sum2 = (int) ((1 + nums.length) * 1. / 2 * nums.length);
-        return sum2 - sum1;
+        int totalSum = (int) ((1 + nums.length) * 1. / 2 * nums.length);
+        for (int num : nums) totalSum -= num;
+        return totalSum;
     }
 
     // approach 2

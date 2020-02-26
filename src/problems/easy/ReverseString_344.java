@@ -1,14 +1,11 @@
 package problems.easy;
 
 public class ReverseString_344 {
-    public static String reverseString(String s) {
-        StringBuilder build = new StringBuilder();
-        int i = s.length() - 1;
-        while (i >= 0) {
-            build.append(s.charAt(i));
-            i--;
+    public void reverseString(char[] s) {
+        for (int i = 0; i < s.length / 2; i++) {
+            char c = s[i];
+            s[i] = s[s.length - i - 1];
+            s[s.length - i - 1] = c;
         }
-        return build.toString();
-//        return new StringBuilder(s).reverse().toString();
     }
 }

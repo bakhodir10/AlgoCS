@@ -23,10 +23,10 @@ public class MaxDepthTree {
     // approach 2. Bottom up approach.
     // The idea is to find the max depth on left child of root and right child of the root and then compare both.
     // Recursive function goes all the way down till it reaches the leaf. The depth count is built from leaf to root
-    public int maxDepth(TreeNode root) {
+    public int maxDepth2(TreeNode root) {
         if (root == null) return 0;
-        int depthLeft = maxDepth(root.left);
-        int depthRight = maxDepth(root.right);
+        int depthLeft = maxDepth2(root.left);
+        int depthRight = maxDepth2(root.right);
         return Math.max(depthLeft, depthRight) + 1;
     }
 

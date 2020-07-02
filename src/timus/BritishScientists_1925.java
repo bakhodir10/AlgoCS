@@ -6,7 +6,7 @@ public class BritishScientists_1925 {
     public static void main(String[] args) {
         Scanner x = new Scanner(System.in);
         int n = x.nextInt(), k = x.nextInt();
-        int t1 = 0, t2 = 0, a, b, s = 0;
+        int  = 0, t2 = 0, a, b, s = 0;
         for (int i = 0; i < n; i++) {
             a = x.nextInt();
             b = x.nextInt();

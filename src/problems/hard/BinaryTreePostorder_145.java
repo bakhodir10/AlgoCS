@@ -1,10 +1,10 @@
-package leetcode_explore.trees.iterative;
+package problems.hard;
 
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Stack;
 
-public class PostOrderTraversal {
+public class BinaryTreePostorder_145 {
 
     public List<Integer> postorderTraversal(TreeNode root) {
         LinkedList<Integer> postOrderList = new LinkedList<>();

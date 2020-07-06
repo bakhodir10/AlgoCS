@@ -5,6 +5,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
+@SuppressWarnings("Duplicates")
 public class SymmetricTree {
 
     // approach 1. Recursive solution

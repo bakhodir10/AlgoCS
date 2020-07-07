@@ -3,25 +3,27 @@ package problems.medium;
 public class RemoveNthNode_19 {
 
     public ListNode removeNthFromEnd(ListNode head, int n) {
-        if(head == null) return null;
+        if (head == null) return null;
 
-        ListNode temp = new ListNode(Integer.MIN_VALUE);
-        temp.next = head;
-        ListNode dummy = temp;
-        int size = 0;
-        while(temp.next != null){
-            temp = temp.next;
-            size ++;
+        ListNode dummy = new ListNode(-1);
+        dummy.next = head;
+
+        ListNode fast = dummy, slow = dummy;
+        int i = 0;
+
+        while (i < n) {
+            fast = fast.next;
+            i++;
         }
 
-        temp = dummy;
-        for (int i = 0; i < size - n; i++) {
-            temp = temp.next;
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next;
         }
-        temp.next = temp.next.next;
 
-        temp = dummy.next;
-        return temp;
+        if (slow != null && slow.next != null) slow.next = slow.next.next;
+
+        return dummy.next;
     }
 
     private class ListNode {

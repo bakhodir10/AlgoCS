@@ -3,9 +3,10 @@ package leetcode_explore.trees;
 import java.util.LinkedList;
 import java.util.Queue;
 
+@SuppressWarnings("Duplicates")
 public class PopulateNextRight {
 
-    // Approach 1. BFS
+    // Approach 1. BFS. Time complexity O(n). Space complexity O(n)
     public Node connect1(Node root) {
         if (root == null) return null;
         Queue<Node> queue = new LinkedList<>();
@@ -25,15 +26,21 @@ public class PopulateNextRight {
         return root;
     }
 
-    // Approach 2. DFS
+    // Approach 2. BFS. Time complexity O(n). Space complexity O(1)
     public Node connect2(Node root) {
         if (root == null) return null;
-        helper(root, null, 0);
-        return root;
-    }
+        Node pre = root, current;
 
-    private void helper(Node root, Node prev, int level) {
-        if (root == null) return;
+        while (pre.left != null) {
+            current = pre;
+            while (current != null) {
+                current.left.next = current.right;
+                if (current.next != null) current.right.next = current.next.left;
+                current = current.next;
+            }
+            pre = pre.left;
+        }
+        return root;
     }
 
     private static class Node {

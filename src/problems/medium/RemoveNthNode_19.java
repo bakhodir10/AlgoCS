@@ -5,28 +5,26 @@ public class RemoveNthNode_19 {
     public ListNode removeNthFromEnd(ListNode head, int n) {
         if (head == null) return null;
 
+        int i = 0;
         ListNode dummy = new ListNode(-1);
         dummy.next = head;
-
         ListNode fast = dummy, slow = dummy;
-        int i = 0;
 
         while (i < n) {
             fast = fast.next;
             i++;
         }
 
-        while (fast != null && fast.next != null) {
+        while (fast.next != null) {
             slow = slow.next;
             fast = fast.next;
         }
 
-        if (slow != null && slow.next != null) slow.next = slow.next.next;
-
+        slow.next = slow.next.next;
         return dummy.next;
     }
 
-    private class ListNode {
+    private static class ListNode {
         int val;
         ListNode next;
 

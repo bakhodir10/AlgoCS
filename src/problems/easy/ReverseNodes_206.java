@@ -2,21 +2,36 @@ package problems.easy;
 
 public class ReverseNodes_206 {
 
-    public ListNode reverseList(ListNode head) {
-        if (head == null) return null;
+    // Iterative approach. One-time pass
+    public ListNode reverseList1(ListNode head) {
+        ListNode pivot = head;
+        ListNode frontier = null;
 
-        ListNode newHead = new ListNode(head.val);
-        head = head.next;
-        while (head != null) {
-            ListNode newNode = new ListNode(head.val);
-            newNode.next = newHead;
-            newHead = newNode;
-            head = head.next;
+        while (pivot != null && pivot.next != null) {
+            frontier = pivot.next;
+            pivot.next = pivot.next.next;
+            frontier.next = head;
+            head = frontier;
         }
-        return newHead;
+        return head;
     }
 
-    private class ListNode {
+    // Iterative approach. One-time pass
+    public ListNode reverseList2(ListNode head) {
+        ListNode current = head;
+        ListNode following = head;
+        ListNode prev = null;
+
+        while (current != null) {
+            following = following.next;
+            current.next = prev;
+            prev = current;
+            current = following;
+        }
+        return head;
+    }
+
+    private static class ListNode {
         int val;
         ListNode next;
 

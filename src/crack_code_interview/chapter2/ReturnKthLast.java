@@ -8,17 +8,15 @@ public class ReturnKthLast {
 
     // Time complexity: O(n). Space complexity: O(1);
     public ListNode returnKthLast(ListNode node, int k) {
-        ListNode p1 = node;
-        ListNode p2 = node;
-        int i = 0;
-        while (i < k && p1 != null) {
-            p1 = p1.next;
-            i++;
+        ListNode fast = node;
+        ListNode slow = node;
+
+        while (k-- > 0) fast = fast.next;
+
+        while (fast != null) {
+            fast = fast.next;
+            slow = slow.next;
         }
-        while (p1 != null) {
-            p1 = p1.next;
-            p2 = p2.next;
-        }
-        return p2;
+        return slow;
     }
 }

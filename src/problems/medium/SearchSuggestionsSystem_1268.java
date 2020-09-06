@@ -14,11 +14,18 @@ public class SearchSuggestionsSystem_1268 {
 
         for (int i = 0; i < searchWord.length(); i++) {
             List<String> suggestedThree = new ArrayList<>(3);
+            String term = searchWord.substring(0, i + 1);
             for (String product : products) {
                 if (suggestedThree.size() == 3) break;
-                if (product.startsWith(searchWord.substring(0, i + 1))) suggestedThree.add(product);
+                if (product.startsWith(term)) suggestedThree.add(product);
             }
-            suggestedWords.add(suggestedThree);
+            if (suggestedThree.size() != 0) suggestedWords.add(suggestedThree);
+            else {
+                while (i < searchWord.length()) {
+                    suggestedWords.add(new ArrayList<>());
+                    i++;
+                }
+            }
         }
         return suggestedWords;
     }

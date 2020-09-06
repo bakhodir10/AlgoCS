@@ -1,7 +1,7 @@
 # Algorithms and Computer Science ![travis build](https://img.shields.io/badge/language-Java%2FC%2B%2B-blue.svg) [![travis build](https://img.shields.io/packagist/l/doctrine/orm.svg)](https://github.com/bakhodir10/AlgoCS/blob/master/LICENSE) [![travis build](https://img.shields.io/badge/say-thanks-ff69b4.svg)](https://saythanks.io/to/bakhodir10)
 
 This repository is a collection of **algorithms, data structures, their implementations,
-350+ solved questions on from popular coding challenge websites such as [leetcode.com](https://leetcode.com),
+400+ solved questions on from popular coding challenge websites such as [leetcode.com](https://leetcode.com),
  [codeforces.com](https://codeforces.com), [hackerrank.com](https://www.hackerrank.com), [geeksforgeeks.org](https://www.geeksforgeeks.org/),
  [codechef.com](https://www.codechef.com/), [topcoder.com](https://www.topcoder.com/challenges/),
  [acm.timus.ru](http://acm.timus.ru/), [spoj.com](https://www.spoj.com/) and

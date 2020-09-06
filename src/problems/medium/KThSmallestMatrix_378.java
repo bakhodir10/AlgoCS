@@ -1,29 +1,20 @@
 package problems.medium;
 
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.Collections;
+import java.util.PriorityQueue;
+import java.util.Queue;
 
 public class KThSmallestMatrix_378 {
 
     public int kthSmallest(int[][] matrix, int k) {
-        Map<Integer, Integer> map = new TreeMap<>();
-        for (int[] aMatrix : matrix) {
-            for (int anAMatrix : aMatrix) {
-                if (!map.containsKey(anAMatrix)) map.put(anAMatrix, 1);
-                else {
-                    int count = map.get(anAMatrix);
-                    map.put(anAMatrix, ++count);
-                }
+        Queue<Integer> pQ = new PriorityQueue<>(k, Collections.reverseOrder());
+
+        for (int[] row : matrix) {
+            for (int num : row) {
+                pQ.offer(num);
+                if (pQ.size() > k) pQ.poll();
             }
         }
-
-        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
-            int key = entry.getKey();
-            int val = entry.getValue();
-            k -= val;
-            if (k <= 0) return key;
-        }
-
-        return -1;
+        return pQ.peek();
     }
 }

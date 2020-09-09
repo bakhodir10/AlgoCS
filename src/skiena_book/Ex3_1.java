@@ -5,7 +5,7 @@ import java.util.Stack;
 public class Ex3_1 {
 
     // Time complexity: O(n). Space complexity: O(n)
-    public static int indexOfNonValidParentheses(String s) {
+    public int indexOfNonValidParentheses(String s) {
         if (s == null) return -1;
         Stack<Character> st = new Stack<>();
         for (int i = 0; i < s.length(); i++) {

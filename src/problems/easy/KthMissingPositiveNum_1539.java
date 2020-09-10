@@ -14,9 +14,15 @@ public class KthMissingPositiveNum_1539 {
         return k + bucket.length;
     }
 
-    // todo
     // Time complexity O(log(n)). Space complexity O(1). Using binary search
-    public int findKthPositive2(int[] arr, int k) {
-        return -1;
+    public int findKthPositive2(int[] a, int k) {
+        int l = 0, r = a.length;
+
+        while (l < r) {
+            int m = (l + r) / 2;
+            if (a[m] - (m + 1) < k) l = m + 1;
+            else r = m;
+        }
+        return l + k;
     }
 }

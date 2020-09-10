@@ -1,47 +1,68 @@
 package problems.medium;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.*;
 
-//todo not done
 public class TopKFrequentWords_692 {
 
-    public List<String> topKFrequent(String words[], int k) {
-        List<String> ans = new ArrayList<>();
-        Map<String, Pair> map = new TreeMap<>();
+    // Time complexity: Worst case O(nlog(n)). Space complexity: O(n)
+    public List<String> topKFrequent(String[] words, int k) {
+        Map<String, Integer> counts = new HashMap<>();
 
+        for (String word : words) counts.put(word, counts.getOrDefault(word, 0) + 1);
+
+        List<String>[] bucket = new ArrayList[words.length];
+
+        for (Map.Entry<String, Integer> entry : counts.entrySet()) {
+            String key = entry.getKey();
+            int val = entry.getValue();
+            if (bucket[val] == null) bucket[val] = new ArrayList<>();
+            bucket[val].add(key);
+        }
+        List<String> ans = new ArrayList<>(k);
+
+        for (int i = bucket.length - 1; i >= 0; i--) {
+            if (bucket[i] == null) continue;
+            List<String> freq = bucket[i];
+            Collections.sort(freq);
+            for (String s : freq) {
+                if (k == 0) return ans;
+                ans.add(s);
+                k--;
+            }
+        }
         return ans;
     }
 
-    private class Pair implements Comparable<Pair> {
+    // Time complexity: O(nlog(k)). Space complexity: O(n)
+    public List<String> topKFrequent2(String[] words, int k) {
+        Map<String, Integer> counts = new HashMap<>();
 
+        for (String word : words) counts.put(word, counts.getOrDefault(word, 0) + 1);
+
+        Queue<Pair> pQ = new PriorityQueue<>(k, (p1, p2) -> p1.count - p2.count != 0
+                ? p1.count - p2.count
+                : p2.word.compareTo(p1.word));
+
+        for (Map.Entry<String, Integer> entry : counts.entrySet()) {
+            pQ.offer(new Pair(entry.getKey(), entry.getValue()));
+            if (pQ.size() > k) pQ.poll();
+        }
+
+        List<String> ans = new ArrayList<>(k);
+
+        while (!pQ.isEmpty()) ans.add(pQ.poll().word);
+
+        Collections.reverse(ans);
+        return ans;
+    }
+
+    private class Pair {
         private String word;
-        private Integer freq;
+        private int count;
 
-        public Pair(String word) {
+        public Pair(String word, int count) {
             this.word = word;
-            this.freq = 1;
-        }
-
-        @Override
-        public int hashCode() {
-            return 31 * word.hashCode();
-        }
-
-        @Override
-        public boolean equals(Object obj) {
-            Pair p = ((Pair) obj);
-            if (obj == null) return false;
-            return this.word.equals(p.word);
-        }
-
-        @Override
-        public int compareTo(Pair p) {
-            int c = this.freq - p.freq;
-            if (c != 0) return c;
-            return this.word.compareTo(p.word);
+            this.count = count;
         }
     }
 }

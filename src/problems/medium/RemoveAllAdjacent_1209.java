@@ -4,6 +4,7 @@ import java.util.Stack;
 
 public class RemoveAllAdjacent_1209 {
 
+    // Time complexity: O(n). Space complexity: O(n)
     public String removeDuplicates(String s, int k) {
         Stack<Node> st = new Stack<>();
 

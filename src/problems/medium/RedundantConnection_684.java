@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class RedundantConnection_684 {
-    
+
     public int[] findRedundantConnection(int[][] edges) {
         UnionFind uf = new UnionFind(edges);
 
@@ -31,8 +31,7 @@ public class RedundantConnection_684 {
         public boolean union(int a, int b) {
             int parentOfA = find(a);
             int parentOfB = find(b);
-            if (parentOfA == parentOfB)
-                return false;    // checking if components are connected. if yes, union is unsuccessful
+            if (parentOfA == parentOfB) return false;    // checking if components are connected. if yes, union is unsuccessful
             nodeWithParent.put(parentOfA, parentOfB);    // connect two components
             return true;
         }

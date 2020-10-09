@@ -1,34 +1,30 @@
 package problems.easy;
 
+
 public class AddStrings_415 {
     public static String addStrings(String s1, String s2) {
-        StringBuilder res = new StringBuilder();
-        int remainder = 0;
-        StringBuilder sb;
+        StringBuilder ans = new StringBuilder();
 
-        if (s1.length() < s2.length()) {
-            sb = new StringBuilder(s1);
-            for (int i = 0; i < s2.length() - s1.length(); i++) {
-                sb.insert(0, '0');
-            }
-            s1 = sb.toString();
-        } else {
-            sb = new StringBuilder(s2);
-            for (int i = 0; i < s1.length() - s2.length(); i++) {
-                sb.insert(0, '0');
-            }
-            s2 = sb.toString();
+        if (s1 == null || s2 == null) return "";
+
+        int r = 0;
+        int k = s1.length() - 1, m = s2.length() - 1;
+
+        while (k >= 0 || m >= 0) {
+            int num1 = k >= 0 ? (s1.charAt(k) - '0') : 0;
+            int num2 = m >= 0 ? (s2.charAt(m) - '0') : 0;
+            int sum = num1 + num2;
+            ans.insert(0, (sum + r) % 10);
+
+            if ((sum + r) >= 10) r = 1;
+            else r = 0;
+
+            k--;
+            m--;
         }
 
-        int len = s1.length();
-        for (int i = len - 1; i >= 0; i--) {
-            int e1 = (int) s1.charAt(i) - '0';
-            int e2 = (int) s2.charAt(i) - '0';
-            int val = e1 + e2 + remainder;
-            res.insert(0, val % 10);
-            remainder = val / 10;
-        }
-        if (remainder == 1) res.insert(0, "1");
-        return res.toString();
+        if (r == 1) ans.insert(0, 1);
+
+        return ans.toString().trim();
     }
 }

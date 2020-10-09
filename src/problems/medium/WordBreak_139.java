@@ -1,29 +1,27 @@
 package problems.medium;
 
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
-// todo not done
 public class WordBreak_139 {
-
-    public static void main(String[] args) {
-        wordBreak("leetcode", Arrays.asList("leet", "code"));
+    public boolean wordBreak(String s, List<String> wordDict) {
+        boolean[] memo = new boolean[s.length()];
+        Arrays.fill(memo, true);
+        return helper(s, new HashSet<>(wordDict), memo, 0);
     }
 
-    private static boolean wordBreak(String s, List<String> wordDict) {
+    private boolean helper(String s, Set<String> set, boolean[] memo, int index) {
+        if (s.isEmpty()) return true;
+        if (!memo[index]) return false;
 
-        for (String word : wordDict) {
-            System.out.println("word: " + word);
-
-            while (s.contains(word)) {
-                int index = s.indexOf(word);
-                System.out.println("s1: " + s);
-                System.out.println("index: " + index);
-                String temp = s.substring(0, index);
-                s = temp + s.substring(index + word.length());
-                System.out.println("s2: " + s);
+        for (int i = 1; i <= s.length(); i++) {
+            if (set.contains(s.substring(0, i)) && helper(s.substring(i), set, memo, index + i)) {
+                return true;
             }
         }
-        return s.isEmpty();
+        memo[index] = false;
+        return false;
     }
 }

@@ -36,7 +36,6 @@ public class SurroundedRegions_130 {
     }
 
     private void coloring(char[][] board, int i, int j) {
-
         if (i < 0 || i > board.length - 1 || j < 0 || j > board[i].length - 1) {
             return;
         }

@@ -2,37 +2,61 @@ package problems.easy;
 
 public class MergeTwoSorted_21 {
 
-    public ListNode mergeTwoLists(ListNode n1, ListNode n2) {
-        if (n1 == null && n2 == null) return null;
-        if (n1 == null) return n2;
-        if (n2 == null) return n1;
+    // Approach 1. Create a new node for each node
+    public ListNode mergeTwoLists1(ListNode l1, ListNode l2) {
+        ListNode newNode = new ListNode();
+        ListNode head = newNode;
 
-        ListNode result = new ListNode(Integer.MIN_VALUE);
+        while (l1 != null || l2 != null) {
+            if (l1 != null && l2 != null) {
+                if (l1.val > l2.val) {
+                    newNode.next = new ListNode(l2.val);
+                    l2 = l2.next;
+                } else {
+                    newNode.next = new ListNode(l1.val);
+                    l1 = l1.next;
+                }
+            } else if (l1 != null) {
+                newNode.next = new ListNode(l1.val);
+                l1 = l1.next;
+            } else {
+                newNode.next = new ListNode(l2.val);
+                l2 = l2.next;
+            }
+            newNode = newNode.next;
+        }
+        return head.next;
+    }
+
+    // Approach 2. Change pointers
+    public ListNode mergeTwoLists2(ListNode n1, ListNode n2) {
+        ListNode result = new ListNode();
+        ListNode head = result;
 
         while (n1 != null && n2 != null) {
             if (n1.val < n2.val) {
                 result.next = n1;
                 n1 = n1.next;
-                result = result.next;
-                result.next = null;
             } else {
                 result.next = n2;
                 n2 = n2.next;
-                result = result.next;
-                result.next = null;
             }
+            result = result.next;
         }
         if (n1 != null) result.next = n1;
         if (n2 != null) result.next = n2;
-        return result;
+        return head.next;
     }
 
-    private class ListNode {
+    private static class ListNode {
         int val;
         ListNode next;
 
-        ListNode(int x) {
-            val = x;
+        ListNode() {
+        }
+
+        ListNode(int val) {
+            this.val = val;
         }
     }
 }

@@ -15,7 +15,13 @@ public class NumberOfGoodPairs_1512 {
 
     // Time complexity: O(n). Space complexity: O(n);
     public int numIdenticalPairs2(int[] nums) {
-        int count = 0;
-        return count;
+        int[] count = new int[101];
+        int total = 0;
+
+        for (int num : nums) {
+            total += count[num];
+            count[num]++;
+        }
+        return total;
     }
 }

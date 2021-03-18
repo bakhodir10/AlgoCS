@@ -10,34 +10,28 @@ import java.util.Map;
 
 public class RemoveDuplicates_82 {
 
-    public static ListNode deleteDuplicates(ListNode node) {
+    // Time complexity: O(n). Space complexity: O(n)
+    public static ListNode deleteDuplicates(ListNode head) {
+        Map<Integer, Integer> counts = new HashMap<>();
+        ListNode newNode = new ListNode();
+        ListNode dummyHead = newNode;
+        newNode.next = head;
 
-        Map<Integer, Integer> elCount = new HashMap<>();
-        ListNode countHead = node;
-        ListNode resHead = new ListNode(Integer.MIN_VALUE);
-        resHead.next = node;
-        ListNode dummy = resHead;
-
-        while (countHead != null) {
-            int count = elCount.getOrDefault(countHead.val, 0);
-            elCount.put(countHead.val, ++count);
-            countHead = countHead.next;
+        ListNode temp = head;
+        while (temp != null) {
+            counts.put(temp.val, counts.getOrDefault(temp.val, 0) + 1);
+            temp = temp.next;
         }
 
-        while (resHead.next != null) {
-            int count = elCount.get(resHead.next.val);
-            if (count > 1) resHead.next = resHead.next.next;
-            else resHead = resHead.next;
+        while (newNode.next != null) {
+            if (counts.get(newNode.next.val) != 1) newNode.next = newNode.next.next;
+            else newNode = newNode.next;
         }
-        return dummy.next;
+        return dummyHead.next;
     }
 
     private static class ListNode {
         int val;
         ListNode next;
-
-        public ListNode(int val) {
-            this.val = val;
-        }
     }
 }

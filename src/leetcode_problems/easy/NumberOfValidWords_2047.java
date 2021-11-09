@@ -2,9 +2,8 @@ package leetcode_problems.easy;
 
 public class NumberOfValidWords_2047 {
 
-    // Time complexity: O(n). Space complexity: O(n)
+    // Time complexity: O(count of words * max(word.length)). Space complexity: O(count of words)
     public int countValidWords(String sentence) {
-
         String[] strs = sentence.split(" ");
         int count = 0;
 

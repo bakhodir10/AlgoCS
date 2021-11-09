@@ -1,13 +1,10 @@
 package leetcode_problems.medium;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class MergeIntervals_56 {
 
-    // Time complexity: O(nlogn). Space complexity: O(n)
+    //  Approach 1. Using LinkedList. Time complexity: O(nlogn). Space complexity: O(n)
     public int[][] merge1(int[][] intervals) {
         Arrays.sort(intervals, (e1, e2) -> e1[0] - e2[0]);
         LinkedList<int[]> merged = new LinkedList<>();
@@ -41,5 +38,29 @@ public class MergeIntervals_56 {
         }
         iVals.add(new int[]{prevStart, prevEnd});
         return iVals.toArray(new int[iVals.size()][]);
+    }
+
+    // Approach 3. Using Stack. Time complexity: O(nlogn). Space complexity: O(n)
+    public int[][] merge3(int[][] intervals) {
+        Arrays.sort(intervals, (e1, e2) -> e1[0] - e2[0]);
+        Stack<int[]> merged = new Stack<>();
+
+        for (int[] interval : intervals) {
+            if (merged.isEmpty() || merged.peek()[1] < interval[0]) merged.push(interval);
+            else {
+                if (merged.peek()[1] < interval[1]) {  // (1, 10), (2 15)
+                    int start = merged.peek()[0];
+                    merged.pop();
+                    merged.push(new int[]{start, interval[1]});
+                }
+            }
+        }
+
+        int idx = 0;
+        int[][] res = new int[merged.size()][2];
+
+        for (int[] interval : merged) res[idx++] = interval;
+
+        return res;
     }
 }

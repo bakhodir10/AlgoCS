@@ -23,7 +23,7 @@ public class KthLargest_215 {
         return pQ.peek();
     }
 
-    // Time complexity: Best O(n), Worst O(n*n). Memory complexity O(1). Using Quick Select algorithm
+    // Time complexity: Average O(n), Worst O(n*n). Memory complexity O(1). Using Quick Select algorithm
     public int findKthLargest3(int[] nums, int k) {
         int left = 0, right = nums.length - 1;
 

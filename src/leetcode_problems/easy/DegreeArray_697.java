@@ -4,42 +4,36 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class DegreeArray_697 {
-    public static int findShortestSubArray(int nums[]) {
+
+    // Time complexity: O(n). Space complexity: O(n)
+    public static int findShortestSubArray(int[] nums) {
         if (nums.length == 0) return 0;
 
-        Map<Integer, Integer> elWithCount = new HashMap<>();
-        Map<Integer, Integer> maxIndex = new HashMap<>();
-        Map<Integer, Integer> minIndex = new HashMap<>();
+        Map<Integer, Integer> counts = new HashMap<>();
+        Map<Integer, Integer> maxIndexes = new HashMap<>();
+        Map<Integer, Integer> minIndexes = new HashMap<>();
 
         for (int i = 0; i < nums.length; i++) {
-            boolean exist = elWithCount.containsKey(nums[i]);
-            if (exist) {
-                int t = elWithCount.get(nums[i]);
-                elWithCount.put(nums[i], ++t);
-            } else elWithCount.put(nums[i], 1);
-
-            boolean max = maxIndex.containsKey(nums[i]);
-            if (max) maxIndex.put(nums[i], i);
-            else {
-                minIndex.put(nums[i], i);
-                maxIndex.put(nums[i], i);
-            }
+            int count = counts.getOrDefault(nums[i], 0);
+            counts.put(nums[i], ++count);
+            if (!minIndexes.containsKey(nums[i])) minIndexes.put(nums[i], i);
+            maxIndexes.put(nums[i], i);
         }
 
-        int maxElem = 0;
-        int res = Integer.MAX_VALUE;
-        for (Map.Entry<Integer, Integer> map : elWithCount.entrySet()) {
-            if (maxElem <= map.getValue()) {
-                int key = map.getKey();
-                int value = map.getValue();
-                int min = minIndex.get(key);
-                int max = maxIndex.get(key);
+        int maxDegree = Integer.MIN_VALUE;
+        int minSubArraySize = Integer.MAX_VALUE;
 
-                if (maxElem == value && res > max - min + 1) res = max - min + 1;
-                else if (maxElem < value) res = max - min + 1;
-                maxElem = value;
-            }
+        for (int count : counts.values()) maxDegree = Math.max(maxDegree, count);
+
+        for (Map.Entry<Integer, Integer> withCount : counts.entrySet()) {
+            int key = withCount.getKey();
+            int val = withCount.getValue();
+            int minIdx = minIndexes.get(key);
+            int maxIdx = maxIndexes.get(key);
+
+            if (val != maxDegree) continue;
+            minSubArraySize = Math.min(minSubArraySize, maxIdx - minIdx + 1);
         }
-        return res;
+        return minSubArraySize;
     }
 }

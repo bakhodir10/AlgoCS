@@ -1,8 +1,8 @@
 package leetcode_problems.easy;
 
-public class ReverseNodes_206 {
+public class ReverseLinkedList_206 {
 
-    // Iterative approach. One-time pass
+    // Iterative approach. One-time pass. Time complexity: O(n). Memory complexity: O(n)
     public ListNode reverseList1(ListNode head) {
         ListNode pivot = head;
         ListNode frontier = null;
@@ -16,19 +16,19 @@ public class ReverseNodes_206 {
         return head;
     }
 
-    // Iterative approach. One-time pass
+    // Iterative approach. One-time pass. Time complexity: O(n). Memory complexity: O(n)
     public ListNode reverseList2(ListNode head) {
-        ListNode current = head;
         ListNode following = head;
+        ListNode curr = head;
         ListNode prev = null;
 
-        while (current != null) {
+        while (curr != null) {
             following = following.next;
-            current.next = prev;
-            prev = current;
-            current = following;
+            curr.next = prev;
+            prev = curr;
+            curr = following;
         }
-        return head;
+        return prev;
     }
 
     private static class ListNode {

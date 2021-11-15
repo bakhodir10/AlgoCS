@@ -1,6 +1,7 @@
 package leetcode_problems.medium;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
@@ -26,29 +27,29 @@ public class KthLargest_215 {
     // Time complexity: Average O(n), Worst O(n*n). Memory complexity O(1). Using Quick Select algorithm
     public int findKthLargest3(int[] nums, int k) {
         int left = 0, right = nums.length - 1;
+        k = nums.length - k;
 
         while (left <= right) {
-            int pivotIndex = partition(nums, left, right, (left + right) / 2);
-            if (pivotIndex == nums.length - k) return nums[nums.length - k];
-            else if (pivotIndex < nums.length - k) left = pivotIndex + 1;
+            int pivotIndex = partition(nums, left, right);
+            if (pivotIndex == k) return nums[k];
+            else if (pivotIndex < k) left = pivotIndex + 1;
             else right = pivotIndex - 1;
         }
         return -1;
     }
 
-    private int partition(int[] nums, int left, int right, int pivotIndex) {
-        int pivotValue = nums[pivotIndex];
-        swap(nums, pivotIndex, right);
-        int storedIndex = left;
+    private int partition(int[] nums, int left, int right) {
+        int pivot = nums[right];
+        int i = left;
 
-        for (int i = left; i <= right - 1; i++) {
-            if (nums[i] < pivotValue) {
-                swap(nums, storedIndex, i);
-                storedIndex++;
+        for (int j = left; j < right; j++) {
+            if (nums[j] <= pivot) {
+                swap(nums, i, j);
+                i++;
             }
         }
-        swap(nums, right, storedIndex);
-        return storedIndex;
+        swap(nums, i, right);
+        return i;
     }
 
     private void swap(int[] nums, int index1, int index2) {

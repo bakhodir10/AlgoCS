@@ -19,7 +19,7 @@ public class PrefixAndSuffixSearch2_745 {
         int idx = 0;
 
         for (String word : cache) {
-            if (word.contains(prefix) && word.contains(suffix)) max = idx;
+            if (word.startsWith(prefix) && word.endsWith(suffix)) max = idx;
             idx++;
         }
         return max;

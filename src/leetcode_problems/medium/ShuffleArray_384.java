@@ -1,27 +1,38 @@
 package leetcode_problems.medium;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.Random;
 
 public class ShuffleArray_384 {
 
-    private int nums[];
-    private int temp[];
+    private int[] array;
+    private final int[] original;
+    private final Random rand;
 
     public ShuffleArray_384(int[] nums) {
-        this.nums = nums;
-        this.temp = nums;
+        this.array = nums;
+        this.original = nums.clone();
+        this.rand = new Random();
+    }
+
+    private int randRange(int min, int max) {
+        return rand.nextInt(max - min) + min;
     }
 
     public int[] reset() {
-        return temp;
+        array = original.clone();
+        return original;
     }
-    
+
     public int[] shuffle() {
-        List<Integer> list = new ArrayList<>();
-        for (int i : nums) list.add(i);
-        Collections.shuffle(list);
-        return list.stream().mapToInt(Integer::intValue).toArray();
+        for (int i = 0; i < array.length; i++) {
+            swap(i, randRange(i, array.length));
+        }
+        return array;
+    }
+
+    private void swap(int i, int j) {
+        int temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
     }
 }

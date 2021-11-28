@@ -2,16 +2,19 @@
 
 This repository is a collection of **algorithms, data structures, their implementations,
 650+ solved questions on from popular coding challenge websites such as [leetcode.com](https://leetcode.com),
- [codeforces.com](https://codeforces.com), [hackerrank.com](https://www.hackerrank.com), [geeksforgeeks.org](https://www.geeksforgeeks.org/),
- [codechef.com](https://www.codechef.com/), [topcoder.com](https://www.topcoder.com/challenges/),
- [acm.timus.ru](http://acm.timus.ru/), [spoj.com](https://www.spoj.com/) and
+ [codeforces.com](https://codeforces.com), [hackerrank.com](https://www.hackerrank.com), [geeksforgeeks.org](https://www.geeksforgeeks.org),
+ [codechef.com](https://www.codechef.com/), [topcoder.com](https://www.topcoder.com/challenges),
+ [acm.timus.ru](http://acm.timus.ru), [spoj.com](https://www.spoj.com) and
 also some interview questions that many people are asked during the interview.**
 Algorithms are implemented in Java. I will try to add C++ versions in the future.
-If you would like to do that or in any other languages, feel free to pull request. 
+If you would like to do that or in any other languages, feel free to send a pull request. 
  
 The main intent of creating the repository is 
-to learn algorithms and helping to those who want to improve problem solving skill. I will try do add new
+to learn algorithms and helping to those who want to improve problem-solving skill. I will try do add new
 algorithms regularly.
+
+[My Leetcode page](https://leetcode.com/bakhodir10)
+
 ## [Data Structures:](https://github.com/bakhodir10/AlgoCS/tree/master/src/ds)
 
 1.  **List**

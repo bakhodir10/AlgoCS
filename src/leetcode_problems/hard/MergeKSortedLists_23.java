@@ -49,7 +49,7 @@ public class MergeKSortedLists_23 {
         return head.next;
     }
 
-    // Approach 3. Merge lists one by one. Time complexity: O(nlogk). Memory complexity: O(1)
+    // Approach 3. Merge lists one by one. Time complexity: O(nk). Memory complexity: O(1)
     public ListNode mergeKLists3(ListNode[] lists) {
         if (lists.length == 0) return null;
         if (lists.length == 1) return lists[0];

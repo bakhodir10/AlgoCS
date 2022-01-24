@@ -3,8 +3,8 @@ package leetcode_problems.medium;
 import java.util.HashMap;
 import java.util.Map;
 
-// Approach 1: Quick Union algorithm
-public class RedundantConnection_684 {
+// Approach 2: Quick Find algorithm
+public class RedundantConnection2_684 {
 
     public int[] findRedundantConnection(int[][] edges) {
         UnionFind uf = new UnionFind(edges);
@@ -16,7 +16,7 @@ public class RedundantConnection_684 {
     }
 
     // a class UnionFind to create connections
-    private class UnionFind {
+    private static class UnionFind {
         private final Map<Integer, Integer> nodeWithParent;
 
         // Time complexity: O(n)
@@ -30,19 +30,22 @@ public class RedundantConnection_684 {
             }
         }
 
-        // Quick union. Time complexity: O(h => height of the tree. The worst case h = n)
+        // Time complexity: O(n)
         public boolean union(int a, int b) {
             int parentOfA = find(a);
             int parentOfB = find(b);
             if (parentOfA == parentOfB) return false;    // checking if components are connected. if yes, union is unsuccessful
-            nodeWithParent.put(parentOfA, parentOfB);    // connect two components
+
+            // connect two components
+            for (int vertex : nodeWithParent.keySet()) {
+                if (nodeWithParent.get(vertex) == parentOfB) nodeWithParent.put(vertex, parentOfA);
+            }
             return true;
         }
 
-        // Time complexity: O(h => height of the tree. The worst case h = n)
+        // Quick Find. Time complexity: O(1)
         private int find(int node) {
-            if (nodeWithParent.get(node) != node) return find(nodeWithParent.get(node));
-            else return node;
+            return nodeWithParent.get(node);
         }
     }
 }

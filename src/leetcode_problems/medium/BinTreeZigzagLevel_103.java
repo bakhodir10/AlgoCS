@@ -6,28 +6,30 @@ import java.util.List;
 import java.util.Queue;
 
 public class BinTreeZigzagLevel_103 {
+
     public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
         if (root == null) return new LinkedList<>();
+
+        int level = 0;
         List<List<Integer>> list = new LinkedList<>();
-        List<Integer> l = new LinkedList<>();
         Queue<TreeNode> q = new LinkedList<>();
         q.offer(root);
-        int zigzag = 0;
+        
         while (!q.isEmpty()) {
             int size = q.size();
+            List<Integer> l = new LinkedList<>();
+
             for (int i = 0; i < size; i++) {
                 TreeNode t = q.poll();
                 l.add(t.val);
                 if (t.left != null) q.offer(t.left);
                 if (t.right != null) q.offer(t.right);
             }
-            if (zigzag % 2 == 1) {
+            if (level % 2 == 1) {
                 Collections.reverse(l);
             }
-            zigzag++;
+            level++;
             list.add(l);
-            System.out.println(l);
-            l = new LinkedList<>();
         }
         return list;
     }

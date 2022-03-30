@@ -4,11 +4,6 @@ import java.util.*;
 
 public class LCABinaryTree_236 {
 
-    private class Input {
-        private int val;
-        private List<Input> vals;
-    }
-
     // Time complexity: O(n). Space complexity: O(n)
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         if (root == null) return null;

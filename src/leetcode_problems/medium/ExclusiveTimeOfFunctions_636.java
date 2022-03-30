@@ -8,7 +8,7 @@ public class ExclusiveTimeOfFunctions_636 {
     // Time complexity: O(n). Space complexity: O(n)
     public int[] exclusiveTime(int n, List<String> logs) {
         int[] res = new int[n];
-        Stack<int[]> st = new Stack<>(); // [id. start/end]
+        Stack<int[]> st = new Stack<>(); // [id, start/end]
         int currTime = 0;
 
         for (String log : logs) {

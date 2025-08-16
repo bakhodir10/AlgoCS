@@ -1,13 +1,43 @@
 package leetcode_problems.medium;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Permutations_46 {
 
-    public static List<List<Integer>> permute(int nums[]) {
+    List<List<Integer>> result = new ArrayList<>();
+    List<Integer> subResult = new LinkedList<>();
+    Set<Integer> used = new HashSet<>();
+
+    // Time complexity: O(n*n!)
+    // Space complexity: O(n)
+    public List<List<Integer>> permute(int[] nums) {
+        backtrack(nums);
+        return result;
+    }
+
+    private void backtrack(int[] nums) {
+        if(subResult.size() == nums.length) {
+            result.add(new LinkedList<>(subResult));
+            return;
+        }
+
+        for(int i = 0; i < nums.length; i ++) {
+            if(used.contains(i)) continue;
+
+            used.add(i);
+            subResult.add(nums[i]);
+
+            backtrack(nums);
+
+            subResult.removeLast();
+            used.remove(i);
+        }
+    }
+
+    // Time complexity: O(n*n!)
+    // Space complexity: O(n)
+    public static List<List<Integer>> permute2(int nums[]) {
         return permuteHelper(nums, 0, new ArrayList<>());
     }
 

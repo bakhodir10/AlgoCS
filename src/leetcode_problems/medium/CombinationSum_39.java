@@ -7,8 +7,35 @@ import java.util.List;
 public class CombinationSum_39 {
 
     List<List<Integer>> res = new ArrayList<>();
+    List<Integer> subRes = new LinkedList<>();
 
-    public List<List<Integer>> combinationSum(int[] candidates, int target) {
+    // Time complexity: O(n^(target/n))
+    // Space complexity: O(target/n)
+    public List<List<Integer>> combinationSum_1(int[] c, int target) {
+        backtrack(0, c, target, 0);
+        return res;
+    }
+
+    private void backtrack(int idx, int[] c, int target, int sumSoFar) {
+        if(sumSoFar > target) return;
+
+        if(sumSoFar >= target) {
+            res.add(new LinkedList<>(subRes));
+            return;
+        }
+
+        for(int i = idx; i < c.length; i ++) {
+            subRes.add(c[i]);
+            sumSoFar += c[i];
+
+            backtrack(i, c, target, sumSoFar);
+
+            subRes.removeLast();
+            sumSoFar -= c[i];
+        }
+    }
+
+    public List<List<Integer>> combinationSum_2(int[] candidates, int target) {
         helper(candidates, 0, target, new LinkedList<>());
         return res;
     }

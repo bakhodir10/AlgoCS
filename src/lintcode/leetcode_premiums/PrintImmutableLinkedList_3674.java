@@ -77,5 +77,4 @@ public class PrintImmutableLinkedList_3674 {
         }
         return len;
     }
-
 }

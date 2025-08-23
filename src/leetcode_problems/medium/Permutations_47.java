@@ -10,16 +10,15 @@ public class Permutations_47 {
     // Time complexity: O(n*n!)
     // Space complexity: O(n)
     public List<List<Integer>> permuteUnique(int[] nums) {
-        boolean[] visited = new boolean[nums.length];
         Map<Integer, Integer> counts = new HashMap<>();
 
         for (int num : nums) counts.put(num, counts.getOrDefault(num, 0) + 1);
-        backtrack(nums, counts);
+        backtrack(nums.length, counts);
         return result;
     }
 
-    private void backtrack(int[] nums, Map<Integer, Integer> counts) {
-        if (subResult.size() == nums.length) {
+    private void backtrack(int n, Map<Integer, Integer> counts) {
+        if (subResult.size() == n) {
             result.add(new LinkedList<>(subResult));
             return;
         }
@@ -33,7 +32,7 @@ public class Permutations_47 {
             subResult.add(num);
             counts.put(num, count - 1);
 
-            backtrack(nums, counts);
+            backtrack(n, counts);
 
             subResult.removeLast();
             counts.put(num, count);

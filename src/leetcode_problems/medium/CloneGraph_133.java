@@ -4,7 +4,22 @@ import java.util.*;
 
 public class CloneGraph_133 {
 
-    // Time complexity: O(n). Space complexity: O(N);
+    static class Node {
+        public int val;
+        public List<Node> neighbors;
+
+        public Node(int _val) {
+            val = _val;
+            neighbors = new ArrayList<>();
+        }
+
+        public Node(int val, ArrayList<Node> neighbors) {
+            this.val = val;
+            this.neighbors = neighbors;
+        }
+    }
+
+    // Time complexity: O(n + m). Space complexity: O(n + m);
     public Node cloneGraph(Node node) {
 
         if (node == null) return null;
@@ -35,18 +50,50 @@ public class CloneGraph_133 {
         return nodesMap.get(node);
     }
 
-    static class Node {
-        public int val;
-        public List<Node> neighbors;
+    // Time complexity: O(n + m). Space complexity: O(n + m);
+    public Node cloneGraph2(Node node) {
+        if(node == null) return null;
 
-        public Node() {
-            val = 0;
-            neighbors = new ArrayList<>();
-        }
 
-        public Node(int _val) {
-            val = _val;
-            neighbors = new ArrayList<>();
+        Map<Node, Node> mapping = new HashMap<>();
+        Deque<Node> q = new ArrayDeque<>();
+        Node newRoot = new Node(node.val);
+
+        mapping.put(node, newRoot);
+        q.offer(node);
+
+        while(!q.isEmpty()) {
+            Node oldNode = q.poll();
+            Node newNode = mapping.get(oldNode);
+
+            for(Node child: oldNode.neighbors) {
+                if(!mapping.containsKey(child)) {
+                    Node copiedChild = new Node(child.val);
+                    newNode.neighbors.add(copiedChild);
+                    mapping.put(child, copiedChild);
+                    q.offer(child);
+                } else {
+                    newNode.neighbors.add(mapping.get(child));
+                }
+            }
         }
+        return newRoot;
+    }
+
+    // Approach 3. Using DFS
+    // Time complexity: O(n + m). Space complexity: O(n + m);
+    Map<Node, Node> visited = new HashMap<>();
+    public Node cloneGraph3(Node node) {
+        if(node == null) return null;
+
+        if(visited.containsKey(node)) return visited.get(node);
+
+        Node newNode = new Node(node.val, new ArrayList<>());
+        visited.put(node, newNode);
+
+        for(Node n: node.neighbors) {
+            newNode.neighbors.add(cloneGraph(n));
+        }
+        return newNode;
     }
 }

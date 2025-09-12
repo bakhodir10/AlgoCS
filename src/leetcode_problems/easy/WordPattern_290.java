@@ -35,7 +35,6 @@ public class WordPattern_290 {
     // m -> str length
     // Time complexity: O(n + m) ~= O(n + n) = O(n)
     // Space complexity: O(n + m) ~= O(n)
-
     public boolean wordPattern2(String pattern, String s) {
         Map<Character, String> cToWord = new HashMap<>();
         Map<String, Character> wordToC = new HashMap<>();

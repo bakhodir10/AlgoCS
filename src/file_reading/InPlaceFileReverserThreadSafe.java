@@ -7,20 +7,20 @@ import java.util.concurrent.ConcurrentHashMap;
 public class InPlaceFileReverserThreadSafe {
 
     public static void main(String[] args) {
-        reverFileContentInPlace(new java.io.File(".").getAbsolutePath()
+        reverseFileContentInPlace(new java.io.File(".").getAbsolutePath()
                 + "/src/file_reading/bigfile.txt", 30);
     }
 
     private static final ConcurrentHashMap<String, Object> fileLocks = new ConcurrentHashMap<>();
 
-    public static void reverFileContentInPlace(String path, int k) {
+    public static void reverseFileContentInPlace(String path, int k) {
         // --- Step 1: Get a lock object for this file ---
         Object lock = fileLocks.get(path);
         if (lock == null) {
             lock = new Object();
             Object existing = fileLocks.putIfAbsent(path, lock);
             if (existing != null) {
-                lock = existing; // another thread added the lock before us
+                lock = existing; // another java.stream_java8.thread added the lock before us
             }
         }
 

@@ -63,7 +63,7 @@ public class CloneNAryTree_1490 {
         if(root == null) return null;
 
         Node newRoot = new Node(root.val);
-        Deque<Node[]> q = new ArrayDeque<>(); // acts as like queue and stack but non thread-safe
+        Deque<Node[]> q = new ArrayDeque<>(); // acts as like queue and stack but non java.stream_java8.thread-safe
         q.push(new Node[]{root, newRoot});
 
         while(!q.isEmpty()) {

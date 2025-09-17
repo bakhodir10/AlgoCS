@@ -6,7 +6,9 @@ import java.util.stream.Collectors;
 
 public class MergeKSortedLists_23 {
 
-    // Approach 1. Sorting. Time complexity: O(nlogn). Memory complexity: O(n)
+    // n -> number of nodes. k -> length of the lists
+    // Approach 1. Sorting. Time complexity: O(n*k).
+    // Memory complexity: O(n)
     public ListNode mergeKLists1(ListNode[] lists) {
         List<Integer> list = new ArrayList<>();
 
@@ -28,23 +30,23 @@ public class MergeKSortedLists_23 {
         return head.next;
     }
 
-    // Approach 2. Using PriorityQueue. Time complexity: O(nlogk). Memory complexity: O(k)
+    // Approach 2. Using PriorityQueue. Time complexity: O(nlogk). Memory complexity: O(n)
     public ListNode mergeKLists2(ListNode[] lists) {
-        PriorityQueue<ListNode> pQ = new PriorityQueue<>((e1, e2) -> e1.val - e2.val);
+        ListNode head = new ListNode(0);
+        ListNode point = head;
 
-        pQ.addAll(Arrays.stream(lists).filter(Objects::nonNull).collect(Collectors.toList()));
+        PriorityQueue<ListNode> pq = new PriorityQueue<>((a, b) -> a.val - b.val);
+        for(ListNode node: lists) {
+            if(node != null) pq.offer(node);
+        }
 
-        ListNode head = new ListNode(-1);
-        ListNode curr = head;
+        while(!pq.isEmpty()) {
+            ListNode smallest = pq.poll();
 
-        while (!pQ.isEmpty()) {
-            ListNode nodeInPq = pQ.poll();
+            point.next = smallest;
+            point = point.next;
 
-            curr.next = nodeInPq;
-            curr = curr.next;
-
-            ListNode nextNodeInPq = nodeInPq.next;
-            if (nextNodeInPq != null) pQ.add(nextNodeInPq);
+            if(smallest.next != null) pq.offer(smallest.next);
         }
         return head.next;
     }

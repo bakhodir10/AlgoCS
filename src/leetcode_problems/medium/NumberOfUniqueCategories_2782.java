@@ -8,6 +8,7 @@ public class NumberOfUniqueCategories_2782 {
         boolean haveSameCategory(int a, int b);
     }
 
+    // Time complexity: O(n^2)
     public int numberOfCategories(int n, CategoryHandler categoryHandler) {
         UnionFind uf = new UnionFind(n);
 
@@ -36,6 +37,7 @@ public class NumberOfUniqueCategories_2782 {
             }
         }
 
+        // Time complexity: O(1)
         public void union(int a, int b) {
             int parentOfA = find(a);
             int parentOfB = find(b);
@@ -52,6 +54,7 @@ public class NumberOfUniqueCategories_2782 {
             }
         }
 
+        // Time complexity: O(1)
         public int find(int a) {
             List<Integer> path = new ArrayList<>();
             while (parents.get(a) != a) {
@@ -60,6 +63,46 @@ public class NumberOfUniqueCategories_2782 {
             }
             for (int p : path) parents.put(p, a);
             return a;
+        }
+    }
+
+
+    // 2nd approach. Using DFS
+    // Time complexity: O(n^2)
+    public int numberOfCategories2(int n, CategoryHandler handler) {
+        int count = 0;
+        Set<Integer> visited = new HashSet<>();
+        Map<Integer, List<Integer>> mappings = new HashMap<>();
+
+        for (int i = 0; i < n; i++) mappings.put(i, new ArrayList<>());
+
+        for (int i = 0; i < n; i++) {
+            for (int j = i + 1; j < n; j++) {
+                if (handler.haveSameCategory(i, j)) {
+                    List<Integer> neighbors = mappings.get(i);
+                    neighbors.add(j);
+                    mappings.put(i, neighbors);
+                }
+            }
+        }
+
+        for (int i = 0; i < n; i++) {
+            if (!visited.contains(i)) {
+                count++;
+                dfs(mappings, i, visited);
+            }
+        }
+        return count;
+    }
+
+    private void dfs(Map<Integer, List<Integer>> mappings, int key, Set<Integer> visited) {
+        visited.add(key);
+        List<Integer> list = mappings.get(key);
+
+        for (int curr : list) {
+            if (!visited.contains(curr)) {
+                dfs(mappings, curr, visited);
+            }
         }
     }
 }

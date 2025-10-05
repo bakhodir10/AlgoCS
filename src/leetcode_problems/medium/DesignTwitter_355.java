@@ -6,8 +6,7 @@ public class DesignTwitter_355 {
 
     // Approach 1: Feed-pul model
 
-    private record Post(int posterId, int tweetId, int time) {
-    }
+    private record Post(int posterId, int tweetId, int time) {}
 
     private int time;
     private final Map<Integer, Set<Integer>> followees;

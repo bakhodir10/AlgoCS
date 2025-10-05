@@ -7,8 +7,30 @@ import java.util.stream.Collectors;
 
 public class PascalTriangle_118 {
 
-    // Time complexity: O(n^2). Space complexity: O(n^2)
+    // Approach: Dynamic Programming. Time complexity: O(n^2). Space complexity: O(n^2)
     public List<List<Integer>> generate1(int numRows) {
+        List<List<Integer>> result = new ArrayList<>();
+        for(int i = 0; i < numRows; i ++) result.add(new ArrayList<>(i + 1));
+        result.get(0).add(1);
+        if(numRows < 2) return result;
+
+        result.get(1).add(1);
+        result.get(1).add(1);
+
+        for(int i = 1; i < result.size() - 1; i ++) {
+            result.get(i + 1).add(1);
+            for(int j = 0; j < result.get(i).size() - 1; j ++) {
+                int curr = result.get(i).get(j);
+                int next = result.get(i).get(j + 1);
+                result.get(i + 1).add(curr + next);
+            }
+            result.get(i + 1).add(1);
+        }
+        return result;
+    }
+
+    // Time complexity: O(n^2). Space complexity: O(n^2)
+    public List<List<Integer>> generate2(int numRows) {
         List<List<Integer>> list = new ArrayList<>();
 
         for (int i = 0; i < numRows; i++) {
@@ -23,7 +45,7 @@ public class PascalTriangle_118 {
     }
 
     // Approach: Dynamic Programming. Time complexity: O(n^2). Space complexity: O(n^2)
-    public List<List<Integer>> generate2(int numRows) {
+    public List<List<Integer>> generate3(int numRows) {
         List<List<Integer>> result = new ArrayList<>();
         int[][] matrix = new int[numRows][];
 
